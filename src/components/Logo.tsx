@@ -10,32 +10,13 @@ const Logo = ({ className = "w-8 h-8" }: LogoProps) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Outer hexagonal frame - engineering precision */}
+      {/* Geometric angular A - precision engineering aesthetic */}
       <path
-        d="M16 2L28 9V23L16 30L4 23V9L16 2Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        fill="none"
-      />
-      {/* Inner geometric A - bold angular */}
-      <path
-        d="M16 7L24 23H20L18 19H14L12 23H8L16 7Z"
+        d="M4 28L16 4L28 28H20L16 18L12 28H4Z"
         fill="currentColor"
       />
-      {/* Crossbar with circuit notch */}
-      <path
-        d="M13 17H19"
-        stroke="currentColor"
-        strokeWidth="2"
-        className="stroke-background"
-      />
-      {/* Tech nodes */}
-      <circle cx="16" cy="2" r="1.5" fill="currentColor" />
-      <circle cx="28" cy="9" r="1.5" fill="currentColor" />
-      <circle cx="28" cy="23" r="1.5" fill="currentColor" />
-      <circle cx="16" cy="30" r="1.5" fill="currentColor" />
-      <circle cx="4" cy="23" r="1.5" fill="currentColor" />
-      <circle cx="4" cy="9" r="1.5" fill="currentColor" />
+      {/* Tech notch detail */}
+      <rect x="14" y="22" width="4" height="2" className="fill-background" />
     </svg>
   );
 };
