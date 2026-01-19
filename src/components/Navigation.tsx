@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,13 +33,13 @@ const Navigation = () => {
         }`}
       >
         <nav className="container-wide py-6 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">A</span>
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-9 h-9 bg-primary rounded-md flex items-center justify-center">
+              <Logo className="w-6 h-6 text-primary-foreground" />
             </div>
-            <div className="flex items-baseline gap-1">
+            <div className="flex items-baseline gap-1.5">
               <span className="text-lg font-bold tracking-tight">aspekt</span>
-              <span className="text-xs text-muted-foreground">ops</span>
+              <span className="text-xs text-muted-foreground font-medium">ops</span>
             </div>
           </a>
 
@@ -70,9 +71,9 @@ const Navigation = () => {
         }`}
       >
         <div className="container-wide py-6 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">A</span>
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 bg-primary rounded-md flex items-center justify-center">
+              <Logo className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-lg font-bold tracking-tight">aspekt</span>
           </div>

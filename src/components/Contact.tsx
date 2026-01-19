@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Check, Mail } from 'lucide-react';
+import { ArrowRight, Check, Mail, Calendar } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact = () => {
@@ -47,32 +47,40 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="text-primary font-mono text-sm tracking-widest uppercase mb-4">Contact</p>
+            <p className="text-primary font-mono text-sm tracking-widest uppercase mb-4">Get Started</p>
             <h2 className="heading-section mb-8">
-              Let's build<br />
-              <span className="text-muted-foreground">something real.</span>
+              Let's talk about<br />
+              <span className="text-muted-foreground">your project.</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Have a hardware venture that needs technical guidance?
-              We'd love to hear about it. Tell us what you're building
-              and we'll get back to you within 24 hours.
+              No pitch required. Just tell us what you're working on and we'll
+              figure out if we can help. Most conversations start with a quick
+              30-minute call — no strings attached.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               <a
                 href="mailto:arthur@aspektdevelopment.com"
-                className="flex items-center gap-4 group"
+                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
-                  <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email us</p>
-                  <p className="font-medium group-hover:text-primary transition-colors duration-300">
-                    arthur@aspektdevelopment.com
-                  </p>
+                  <p className="font-medium group-hover:text-primary transition-colors">Email us directly</p>
+                  <p className="text-sm text-muted-foreground">arthur@aspektdevelopment.com</p>
                 </div>
               </a>
+
+              <div className="flex items-center gap-4 p-4 rounded-lg border border-border">
+                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
+                  <Calendar className="w-5 h-5 text-muted-foreground" />
+                </div>
+                <div>
+                  <p className="font-medium">Response time</p>
+                  <p className="text-sm text-muted-foreground">Usually within 24 hours</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -115,7 +123,7 @@ const Contact = () => {
 
             <div>
               <label htmlFor="company" className="block text-sm font-medium mb-3">
-                Company <span className="text-muted-foreground font-normal">(optional)</span>
+                Company / Project <span className="text-muted-foreground font-normal">(optional)</span>
               </label>
               <input
                 type="text"
@@ -123,13 +131,13 @@ const Contact = () => {
                 value={formState.company}
                 onChange={(e) => setFormState({ ...formState, company: e.target.value })}
                 className="w-full px-4 py-4 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
-                placeholder="Your company"
+                placeholder="Your company or project name"
               />
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-3">
-                Message
+                What are you working on?
               </label>
               <textarea
                 id="message"
@@ -138,7 +146,7 @@ const Contact = () => {
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                 className="w-full px-4 py-4 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground resize-none"
-                placeholder="Tell us about your venture..."
+                placeholder="Tell us about your project — stage, challenges, what you're looking for..."
               />
             </div>
 

@@ -1,27 +1,27 @@
-import { ArrowUpRight, Cpu, Users, Rocket } from 'lucide-react';
+import { ArrowUpRight, FileText, Target, Shield } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const services = [
   {
-    icon: Cpu,
+    icon: FileText,
     number: '01',
-    title: 'Fractional CTO',
-    description: 'Technical leadership without the full-time commitment. Architecture decisions, strategic direction, and hands-on problem solving for your hardware venture.',
-    features: ['Technical strategy', 'Architecture review', 'Vendor selection', 'Process design'],
+    title: 'Technical Architecture',
+    description: 'System design, tech stack decisions, and feasibility assessments. The documentation you need to prove your product can be built.',
+    features: ['System architecture', 'Tech stack selection', 'Risk assessment', 'Build vs buy analysis'],
   },
   {
-    icon: Users,
+    icon: Target,
     number: '02',
-    title: 'Team Building',
-    description: 'Build your engineering team right from day one. We help you define roles, run interviews, and create a culture that ships.',
-    features: ['Role definition', 'Interview process', 'Onboarding design', 'Culture building'],
+    title: 'Investor Readiness',
+    description: 'Technical sections for pitch decks, data room materials, and the answers to questions investors will ask.',
+    features: ['Pitch deck tech slides', 'Technical roadmap', 'Milestone planning', 'Data room prep'],
   },
   {
-    icon: Rocket,
+    icon: Shield,
     number: '03',
-    title: 'Fundraising Prep',
-    description: 'Get investor-ready with technical due diligence preparation, pitch deck review, and documentation that stands up to scrutiny.',
-    features: ['Tech DD prep', 'Pitch support', 'Documentation', 'Investor intros'],
+    title: 'Due Diligence Support',
+    description: 'Prepare for technical due diligence before investors dig in. Know your weak spots and address them proactively.',
+    features: ['Tech DD preparation', 'Risk documentation', 'Team assessment', 'Scalability review'],
   },
 ];
 
@@ -34,14 +34,15 @@ const Services = () => {
         {/* Section header */}
         <div className={`flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div>
-            <p className="text-primary font-mono text-sm tracking-widest uppercase mb-4">Services</p>
+            <p className="text-primary font-mono text-sm tracking-widest uppercase mb-4">What We Do</p>
             <h2 className="heading-section">
-              How we help you<br />
-              <span className="text-muted-foreground">ship faster.</span>
+              Get the technical<br />
+              <span className="text-muted-foreground">credibility you need.</span>
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md text-lg">
-            We've been in your shoes. Now we bring that experience to help you avoid the mistakes we made.
+            Investors want proof. We help you build the technical story that
+            gets you funded — based on what we've learned shipping real products.
           </p>
         </div>
 
@@ -79,6 +80,19 @@ const Services = () => {
               </ul>
             </article>
           ))}
+        </div>
+
+        {/* Low barrier CTA */}
+        <div className={`mt-16 p-8 md:p-12 bg-secondary/50 rounded-lg border border-border transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '500ms' }}>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Not sure where to start?</h3>
+              <p className="text-muted-foreground">Book a free 30-minute call. No commitment — just a conversation about your project.</p>
+            </div>
+            <a href="#contact" className="btn-primary whitespace-nowrap">
+              Book a call
+            </a>
+          </div>
         </div>
       </div>
     </section>

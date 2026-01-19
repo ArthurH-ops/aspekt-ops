@@ -1,4 +1,5 @@
 import { Linkedin, ExternalLink } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,13 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">A</span>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 bg-primary rounded-md flex items-center justify-center">
+                <Logo className="w-6 h-6 text-primary-foreground" />
               </div>
-              <div className="flex items-baseline gap-1">
+              <div className="flex items-baseline gap-1.5">
                 <span className="text-lg font-bold tracking-tight">aspekt</span>
-                <span className="text-xs text-muted-foreground">ops</span>
+                <span className="text-xs text-muted-foreground font-medium">ops</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">

@@ -13,23 +13,25 @@ const ValueProposition = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <p className="font-mono text-sm tracking-widest uppercase mb-6 text-primary-foreground/60">
-              About
+              Why Us
             </p>
             <h2 className="heading-section mb-8">
-              Practitioners first.<br />
+              Builders first.<br />
               <span className="opacity-60">Advisors second.</span>
             </h2>
             <div className="space-y-6 text-lg text-primary-foreground/80 leading-relaxed">
               <p>
-                We're not consultants who've only read about building hardware.
-                We're the team behind Aspekt Development — a product studio that's
-                shipped brain stimulation devices, biotech lab equipment, and
-                industrial IoT systems.
+                We're not consultants who've only read case studies. We're the team
+                behind Aspekt Development — a product studio that ships hardware
+                for startups and enterprises alike.
               </p>
               <p>
-                Now we bring that hands-on experience to help you navigate the
-                complexities of scaling your hardware venture. No theoretical
-                frameworks. Just real lessons from real products.
+                Brain stimulation devices. Biotech lab equipment. Industrial IoT.
+                Consumer electronics. We've seen the pitfalls and know the shortcuts.
+                That's what we bring to your project.
+              </p>
+              <p className="text-primary-foreground font-medium">
+                No theoretical frameworks. Just lessons from real products.
               </p>
             </div>
           </div>
@@ -41,16 +43,20 @@ const ValueProposition = () => {
 
               <div className="space-y-4 mb-10">
                 <div className="flex items-center justify-between py-3 border-b border-white/10">
-                  <span className="text-primary-foreground/60">Location</span>
+                  <span className="text-primary-foreground/60">Based in</span>
                   <span className="font-medium">Vienna, Austria</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-white/10">
-                  <span className="text-primary-foreground/60">Founded</span>
+                  <span className="text-primary-foreground/60">Building since</span>
                   <span className="font-medium">2016</span>
                 </div>
-                <div className="flex items-center justify-between py-3">
+                <div className="flex items-center justify-between py-3 border-b border-white/10">
                   <span className="text-primary-foreground/60">Focus</span>
                   <span className="font-medium">Deep-Tech / Hardware</span>
+                </div>
+                <div className="flex items-center justify-between py-3">
+                  <span className="text-primary-foreground/60">Working with</span>
+                  <span className="font-medium">Founders & Corporates</span>
                 </div>
               </div>
 
@@ -65,7 +71,7 @@ const ValueProposition = () => {
                   rel="noopener noreferrer"
                   className="btn-ghost text-primary-foreground/80 hover:text-white"
                 >
-                  Visit Aspekt Development
+                  See our products
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>

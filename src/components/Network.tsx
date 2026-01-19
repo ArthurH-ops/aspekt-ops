@@ -6,25 +6,25 @@ const projects = [
     name: 'Brightmind',
     category: 'Medical Device',
     description: 'Non-invasive brain stimulation device for migraine prevention. From prototype to CE certification.',
-    image: '/projects/brightmind.jpg',
+    link: 'https://aspektdevelopment.com',
   },
   {
     name: 'Cellectric',
     category: 'Biotech Equipment',
     description: 'Laboratory electroporation system for biotechnology research. Full product development.',
-    image: '/projects/cellectric.jpg',
+    link: 'https://aspektdevelopment.com',
   },
   {
     name: 'Lifetaq',
     category: 'Biotech',
     description: '3D human cell models for pharmaceutical drug testing. Complex hardware-software integration.',
-    image: '/projects/lifetaq.jpg',
+    link: 'https://aspektdevelopment.com',
   },
   {
     name: 'BluePlanet',
     category: 'AgTech / IoT',
     description: 'Automated aquaculture feeding systems. Industrial IoT at scale.',
-    image: '/projects/blueplanet.jpg',
+    link: 'https://aspektdevelopment.com',
   },
 ];
 
@@ -51,16 +51,19 @@ const Network = () => {
         {/* Project grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <article
+            <a
               key={project.name}
-              className={`group cursor-pointer transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group block transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
               {/* Image placeholder */}
               <div className="aspect-[16/10] bg-secondary rounded-lg mb-6 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-border/50 group-hover:text-primary/20 transition-colors duration-500">
+                  <span className="text-6xl font-bold text-border/50 group-hover:text-primary/30 transition-colors duration-500">
                     {project.name.charAt(0)}
                   </span>
                 </div>
@@ -82,8 +85,21 @@ const Network = () => {
                   </p>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
+        </div>
+
+        {/* Link to main site */}
+        <div className={`mt-12 pt-8 border-t border-border text-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '600ms' }}>
+          <a
+            href="https://aspektdevelopment.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          >
+            View all projects on Aspekt Development
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

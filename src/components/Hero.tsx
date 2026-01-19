@@ -12,23 +12,21 @@ const Hero = () => {
       <div className="container-wide relative z-10 pt-32 pb-20">
         <div className="max-w-5xl">
           {/* Eyebrow */}
-          <p
-            className="text-primary font-mono text-sm tracking-widest uppercase mb-8 animate-fade-up"
-          >
+          <p className="text-primary font-mono text-sm tracking-widest uppercase mb-8 animate-fade-up">
             Deep-Tech Advisory
           </p>
 
           {/* Main headline */}
           <h1 className="heading-hero mb-8">
-            <span className="animate-fade-up block">We build</span>
+            <span className="animate-fade-up block">We've shipped</span>
             <span className="animate-fade-up block" style={{ animationDelay: '0.1s' }}>
-              <span className="text-serif-accent">hardware.</span>
+              <span className="text-serif-accent">50+ hardware products.</span>
             </span>
             <span className="animate-fade-up block text-muted-foreground" style={{ animationDelay: '0.2s' }}>
-              Now we help
+              Now we help founders
             </span>
             <span className="animate-fade-up block text-muted-foreground" style={{ animationDelay: '0.3s' }}>
-              you build yours.
+              ship theirs.
             </span>
           </h1>
 
@@ -37,9 +35,9 @@ const Hero = () => {
             className="text-large text-muted-foreground max-w-2xl mb-12 animate-fade-up"
             style={{ animationDelay: '0.4s' }}
           >
-            Strategic advisory from the team behind Aspekt Development.
-            Fractional CTO, technical team building, and fundraising preparation
-            for hardware and deep-tech founders.
+            Technical advisory for deep-tech founders. We've seen what works
+            and what doesn't — from biotech lab equipment to medical devices.
+            Let's make sure you build it right the first time.
           </p>
 
           {/* CTAs */}
@@ -48,11 +46,11 @@ const Hero = () => {
             style={{ animationDelay: '0.5s' }}
           >
             <a href="#contact" className="btn-primary">
-              Let's talk
+              Start a conversation
               <ArrowRight className="w-5 h-5" />
             </a>
             <a href="#work" className="btn-outline">
-              See our work
+              See what we've built
             </a>
           </div>
         </div>
@@ -72,7 +70,7 @@ const Hero = () => {
           </div>
           <div>
             <p className="text-4xl md:text-5xl font-bold">Vienna</p>
-            <p className="text-sm text-muted-foreground mt-1">Based globally</p>
+            <p className="text-sm text-muted-foreground mt-1">EU deep-tech hub</p>
           </div>
         </div>
       </div>
