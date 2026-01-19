@@ -5,21 +5,28 @@ const ValueProposition = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Background texture */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[size:48px_48px]" />
+    <section id="about" className="section-padding relative overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/bg/biotech.jpg')" }}
+      />
+      {/* Dark green overlay */}
+      <div className="absolute inset-0 bg-[#0d2518]/95" />
+      {/* Grid texture */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
       <div className="container-wide relative z-10" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="font-mono text-sm tracking-widest uppercase mb-6 text-primary-foreground/60">
+            <p className="font-mono text-sm tracking-[0.3em] uppercase mb-6 text-primary">
               Why Us
             </p>
-            <h2 className="heading-section mb-8">
+            <h2 className="heading-section mb-8 text-white">
               Builders first.<br />
-              <span className="opacity-60">Advisors second.</span>
+              <span className="text-white/50">Advisors second.</span>
             </h2>
-            <div className="space-y-6 text-lg text-primary-foreground/80 leading-relaxed">
+            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
               <p>
                 We're not consultants who've only read case studies. We're the team
                 behind Aspekt Development — a product studio that ships hardware
@@ -30,38 +37,38 @@ const ValueProposition = () => {
                 Consumer electronics. We've seen the pitfalls and know the shortcuts.
                 That's what we bring to your project.
               </p>
-              <p className="text-primary-foreground font-medium">
+              <p className="text-white font-medium">
                 No theoretical frameworks. Just lessons from real products.
               </p>
             </div>
           </div>
 
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '150ms' }}>
-            <div className="bg-black/20 backdrop-blur-sm rounded-lg p-8 md:p-10 border border-white/10">
-              <p className="text-5xl md:text-6xl font-bold mb-2">50+</p>
-              <p className="text-primary-foreground/60 mb-8">Hardware products shipped through Aspekt Development</p>
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 md:p-10 border border-white/10">
+              <p className="text-6xl md:text-7xl font-bold mb-2 text-white">50+</p>
+              <p className="text-white/50 mb-8">Hardware products shipped through Aspekt Development</p>
 
               <div className="space-y-4 mb-10">
                 <div className="flex items-center justify-between py-3 border-b border-white/10">
-                  <span className="text-primary-foreground/60">Based in</span>
-                  <span className="font-medium">Vienna, Austria</span>
+                  <span className="text-white/50">Based in</span>
+                  <span className="font-medium text-white">Vienna, Austria</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-white/10">
-                  <span className="text-primary-foreground/60">Building since</span>
-                  <span className="font-medium">2016</span>
+                  <span className="text-white/50">Building since</span>
+                  <span className="font-medium text-white">2016</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-white/10">
-                  <span className="text-primary-foreground/60">Focus</span>
-                  <span className="font-medium">Deep-Tech / Hardware</span>
+                  <span className="text-white/50">Focus</span>
+                  <span className="font-medium text-white">Deep-Tech / Hardware</span>
                 </div>
                 <div className="flex items-center justify-between py-3">
-                  <span className="text-primary-foreground/60">Working with</span>
-                  <span className="font-medium">Founders & Corporates</span>
+                  <span className="text-white/50">Working with</span>
+                  <span className="font-medium text-white">Founders & Corporates</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="btn-primary bg-white text-black hover:bg-white/90">
+                <a href="#contact" className="btn-primary bg-primary hover:bg-primary/90">
                   Work with us
                   <ArrowRight className="w-5 h-5" />
                 </a>
@@ -69,7 +76,7 @@ const ValueProposition = () => {
                   href="https://aspektdevelopment.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost text-primary-foreground/80 hover:text-white"
+                  className="btn-ghost text-white/70 hover:text-white"
                 >
                   See our products
                   <ExternalLink className="w-4 h-4" />

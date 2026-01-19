@@ -1,6 +1,5 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import Clients from '@/components/Clients';
 import Services from '@/components/Services';
 import Network from '@/components/Network';
 import ValueProposition from '@/components/ValueProposition';
@@ -13,7 +12,6 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <Clients />
         <Services />
         <Network />
         <ValueProposition />

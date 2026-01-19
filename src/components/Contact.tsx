@@ -42,12 +42,18 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding border-t border-border">
-      <div className="container-wide" ref={ref}>
+    <section id="contact" className="section-padding border-t border-border relative overflow-hidden">
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.03]"
+        style={{ backgroundImage: "url('/images/bg/waveform.jpg')" }}
+      />
+
+      <div className="container-wide relative z-10" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="text-primary font-mono text-sm tracking-widest uppercase mb-4">Get Started</p>
+            <p className="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-4">Get Started</p>
             <h2 className="heading-section mb-8">
               Let's talk about<br />
               <span className="text-muted-foreground">your project.</span>
@@ -61,10 +67,10 @@ const Contact = () => {
             <div className="space-y-4">
               <a
                 href="mailto:arthur@aspektdevelopment.com"
-                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors group"
+                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors group bg-card/50"
               >
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium group-hover:text-primary transition-colors">Email us directly</p>
@@ -72,7 +78,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-lg border border-border">
+              <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card/50">
                 <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
                   <Calendar className="w-5 h-5 text-muted-foreground" />
                 </div>
@@ -101,7 +107,7 @@ const Contact = () => {
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                  className="w-full px-4 py-4 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
+                  className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
                   placeholder="Your name"
                 />
               </div>
@@ -115,7 +121,7 @@ const Contact = () => {
                   required
                   value={formState.email}
                   onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                  className="w-full px-4 py-4 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
+                  className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
                   placeholder="you@company.com"
                 />
               </div>
@@ -130,7 +136,7 @@ const Contact = () => {
                 id="company"
                 value={formState.company}
                 onChange={(e) => setFormState({ ...formState, company: e.target.value })}
-                className="w-full px-4 py-4 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
+                className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
                 placeholder="Your company or project name"
               />
             </div>
@@ -145,7 +151,7 @@ const Contact = () => {
                 rows={5}
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                className="w-full px-4 py-4 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground resize-none"
+                className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground resize-none"
                 placeholder="Tell us about your project — stage, challenges, what you're looking for..."
               />
             </div>
