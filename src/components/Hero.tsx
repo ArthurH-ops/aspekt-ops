@@ -1,0 +1,91 @@
+import { ArrowRight, ArrowDown } from 'lucide-react';
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px]" />
+
+      {/* Glow effect */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px]" />
+
+      <div className="container-wide relative z-10 pt-32 pb-20">
+        <div className="max-w-5xl">
+          {/* Eyebrow */}
+          <p
+            className="text-primary font-mono text-sm tracking-widest uppercase mb-8 animate-fade-up"
+          >
+            Deep-Tech Advisory
+          </p>
+
+          {/* Main headline */}
+          <h1 className="heading-hero mb-8">
+            <span className="animate-fade-up block">We build</span>
+            <span className="animate-fade-up block" style={{ animationDelay: '0.1s' }}>
+              <span className="text-serif-accent">hardware.</span>
+            </span>
+            <span className="animate-fade-up block text-muted-foreground" style={{ animationDelay: '0.2s' }}>
+              Now we help
+            </span>
+            <span className="animate-fade-up block text-muted-foreground" style={{ animationDelay: '0.3s' }}>
+              you build yours.
+            </span>
+          </h1>
+
+          {/* Subtext */}
+          <p
+            className="text-large text-muted-foreground max-w-2xl mb-12 animate-fade-up"
+            style={{ animationDelay: '0.4s' }}
+          >
+            Strategic advisory from the team behind Aspekt Development.
+            Fractional CTO, technical team building, and fundraising preparation
+            for hardware and deep-tech founders.
+          </p>
+
+          {/* CTAs */}
+          <div
+            className="flex flex-col sm:flex-row gap-4 animate-fade-up"
+            style={{ animationDelay: '0.5s' }}
+          >
+            <a href="#contact" className="btn-primary">
+              Let's talk
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a href="#work" className="btn-outline">
+              See our work
+            </a>
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div
+          className="grid grid-cols-3 gap-8 mt-24 pt-12 border-t border-border max-w-2xl animate-fade-up"
+          style={{ animationDelay: '0.6s' }}
+        >
+          <div>
+            <p className="text-4xl md:text-5xl font-bold text-primary">50+</p>
+            <p className="text-sm text-muted-foreground mt-1">Products shipped</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-bold">8+</p>
+            <p className="text-sm text-muted-foreground mt-1">Years building</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-bold">Vienna</p>
+            <p className="text-sm text-muted-foreground mt-1">Based globally</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: '1s' }}>
+        <a href="#services" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <ArrowDown className="w-4 h-4 animate-bounce" />
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
