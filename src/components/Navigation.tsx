@@ -18,8 +18,10 @@ const Navigation = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
+    { label: 'Industries', href: '#verticals' },
     { label: 'Services', href: '#services' },
     { label: 'Work', href: '#work' },
+    { label: 'Process', href: '#process' },
     { label: 'About', href: '#about' },
   ];
 
@@ -43,13 +45,13 @@ const Navigation = () => {
             </div>
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="nav-link">
+              <a key={link.href} href={link.href} className="nav-link text-sm">
                 {link.label}
               </a>
             ))}
-            <a href="#contact" className="btn-primary py-3 px-6 text-base">
+            <a href="#contact" className="btn-primary py-2.5 px-5 text-sm">
               Get in touch
             </a>
           </div>
@@ -106,7 +108,7 @@ const Navigation = () => {
             className={`btn-primary w-fit mt-8 transition-all duration-500 ${
               isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
-            style={{ transitionDelay: '325ms' }}
+            style={{ transitionDelay: '475ms' }}
           >
             Get in touch
           </a>

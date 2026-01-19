@@ -30,17 +30,17 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Fractional CTO
+                  Technical Architecture
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Team Building
+                  Investor Readiness
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Fundraising Prep
+                  Due Diligence Support
                 </a>
               </li>
             </ul>
@@ -78,6 +78,17 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold mb-5">Connect</h4>
             <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://arthurh.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
+                >
+                  Arthur Handler
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
               <li>
                 <a
                   href="mailto:arthur@aspektdevelopment.com"

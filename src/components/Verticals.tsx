@@ -5,13 +5,13 @@ const verticals = [
   {
     title: 'MedTech',
     description: 'Class I/II/III medical devices, regulatory pathways, clinical integration.',
-    image: '/images/bg/biotech.jpg',
+    image: '/images/bg/labautomatisation.jpg',
     stats: '15+ devices',
   },
   {
     title: 'BioTech & LabTech',
     description: 'Laboratory automation, analytical instruments, life science equipment.',
-    image: '/images/bg/labautomatisation.jpg',
+    image: '/images/bg/biotech.jpg',
     stats: '20+ systems',
   },
   {
@@ -82,22 +82,6 @@ const Verticals = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Additional info */}
-        <div className={`mt-12 grid md:grid-cols-3 gap-8 pt-12 border-t border-border/50 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '600ms' }}>
-          <div>
-            <p className="text-3xl font-bold text-primary mb-2">AI & Edge</p>
-            <p className="text-muted-foreground text-sm">Embedded ML, computer vision, real-time inference systems.</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold mb-2">Industrial IoT</p>
-            <p className="text-muted-foreground text-sm">Connected devices, sensor networks, predictive maintenance.</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold mb-2">Consumer Hardware</p>
-            <p className="text-muted-foreground text-sm">Mass production, DFM optimization, supply chain setup.</p>
-          </div>
         </div>
       </div>
     </section>

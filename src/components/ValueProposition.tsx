@@ -6,15 +6,10 @@ const ValueProposition = () => {
 
   return (
     <section id="about" className="section-padding relative overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/bg/biotech.jpg')" }}
-      />
-      {/* Dark green overlay */}
-      <div className="absolute inset-0 bg-[#0d2518]/95" />
-      {/* Grid texture */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" />
+      {/* Clean dark green background */}
+      <div className="absolute inset-0 bg-[#0d2518]" />
+      {/* Subtle grid texture */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
       <div className="container-wide relative z-10" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -45,8 +40,8 @@ const ValueProposition = () => {
 
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '150ms' }}>
             <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 md:p-10 border border-white/10">
-              <p className="text-6xl md:text-7xl font-bold mb-2 text-white">50+</p>
-              <p className="text-white/50 mb-8">Hardware products shipped through Aspekt Development</p>
+              <p className="text-6xl md:text-7xl font-bold mb-2 text-white">M+</p>
+              <p className="text-white/50 mb-8">Products on the market through Aspekt Development</p>
 
               <div className="space-y-4 mb-10">
                 <div className="flex items-center justify-between py-3 border-b border-white/10">

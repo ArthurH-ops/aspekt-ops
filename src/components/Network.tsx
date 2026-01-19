@@ -39,26 +39,11 @@ const projects = [
   },
 ];
 
-const capabilities = [
-  { label: 'Embedded Systems', count: '40+' },
-  { label: 'Mechanical Engineering', count: '50+' },
-  { label: 'PCB Design', count: '100+' },
-  { label: 'Firmware Development', count: '35+' },
-  { label: 'Regulatory (CE/FDA)', count: '20+' },
-  { label: 'DFM Optimization', count: '30+' },
-];
-
 const Network = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
     <section id="work" className="section-padding border-t border-border relative overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
-        style={{ backgroundImage: "url('/images/bg/labautomatisation.jpg')" }}
-      />
-
       <div className="container-wide relative z-10" ref={ref}>
         {/* Section header */}
         <div className={`flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -114,21 +99,8 @@ const Network = () => {
           ))}
         </div>
 
-        {/* Capabilities */}
-        <div className={`mt-20 pt-12 border-t border-border/50 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '700ms' }}>
-          <h3 className="text-xl font-semibold mb-8">Engineering Capabilities</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {capabilities.map((cap) => (
-              <div key={cap.label} className="text-center p-4 rounded-lg bg-card/50 border border-border/50 hover:border-primary/30 transition-colors">
-                <p className="text-2xl font-bold text-primary mb-1">{cap.count}</p>
-                <p className="text-xs text-muted-foreground">{cap.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Link to main site */}
-        <div className={`mt-12 text-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '800ms' }}>
+        <div className={`mt-16 text-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '600ms' }}>
           <a
             href="https://aspektdevelopment.com"
             target="_blank"

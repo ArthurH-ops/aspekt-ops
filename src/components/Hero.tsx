@@ -6,14 +6,14 @@ const Hero = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/bg/hardcore engineering.jpg')" }}
+        style={{ backgroundImage: "url('/images/bg/waveform.jpg')" }}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/85" />
+      <div className="absolute inset-0 bg-background/80" />
       {/* Subtle grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
       {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/8 rounded-full blur-[150px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-[150px]" />
 
       <div className="container-wide relative z-10 pt-32 pb-20">
         <div className="max-w-5xl">
@@ -35,7 +35,7 @@ const Hero = () => {
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-12 animate-fade-up leading-relaxed"
             style={{ animationDelay: '0.2s' }}
           >
-            50+ products shipped through Aspekt Development. Medical devices,
+            Millions of products shipped through Aspekt Development. Medical devices,
             biotech equipment, industrial systems. We've built what most call impossible —
             now we help founders do the same.
           </p>
@@ -61,8 +61,8 @@ const Hero = () => {
           style={{ animationDelay: '0.4s' }}
         >
           <div>
-            <p className="text-4xl md:text-5xl font-bold text-primary">50+</p>
-            <p className="text-sm text-muted-foreground mt-1">Products shipped</p>
+            <p className="text-4xl md:text-5xl font-bold text-primary">M+</p>
+            <p className="text-sm text-muted-foreground mt-1">Products on market</p>
           </div>
           <div>
             <p className="text-4xl md:text-5xl font-bold">8+</p>
