@@ -3,27 +3,27 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 const steps = [
   {
     number: '01',
-    title: 'Discovery Call',
-    description: 'We learn about your product, stage, and specific technical challenges. No prep needed — just a conversation.',
-    duration: '30 min',
+    title: 'Discovery',
+    description: 'We learn about your product, stage, and challenges. No prep needed.',
+    time: '30 min call',
   },
   {
     number: '02',
-    title: 'Technical Assessment',
-    description: 'We review your architecture, identify risks, and map out what needs to happen for investor confidence.',
-    duration: '1-2 weeks',
+    title: 'Assessment',
+    description: 'We review architecture, identify risks, map what's needed.',
+    time: '1-2 weeks',
   },
   {
     number: '03',
-    title: 'Documentation & Prep',
-    description: 'We create the technical materials investors expect: architecture docs, roadmaps, risk assessments.',
-    duration: '2-4 weeks',
+    title: 'Documentation',
+    description: 'We create technical materials investors expect.',
+    time: '2-4 weeks',
   },
   {
     number: '04',
-    title: 'Due Diligence Support',
-    description: 'We prepare you for technical deep-dives and join calls if needed. You walk in confident.',
-    duration: 'Ongoing',
+    title: 'Support',
+    description: 'We prep you for due diligence and join calls if needed.',
+    time: 'Ongoing',
   },
 ];
 
@@ -31,65 +31,59 @@ const Process = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="process" className="section-padding border-t border-border relative overflow-hidden">
-      {/* Background - spacetech */}
+    <section id="process" className="section-padding border-t border-border relative overflow-hidden" ref={ref}>
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.06] dark:opacity-[0.05]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.03]"
         style={{ backgroundImage: "url('/images/bg/spacetech.jpg')" }}
       />
 
-      <div className="container-wide relative z-10" ref={ref}>
-        {/* Section header */}
-        <div className={`flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div>
-            <p className="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-4">How We Work</p>
-            <h2 className="heading-section">
-              Simple process.<br />
-              <span className="text-muted-foreground">Real results.</span>
-            </h2>
-          </div>
-          <p className="text-muted-foreground max-w-md text-lg">
-            No complex engagements. We integrate with your workflow and deliver what you actually need.
-          </p>
+      <div className="container-wide relative z-10">
+        {/* Header */}
+        <div className={`mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="eyebrow mb-6">How We Work</p>
+          <h2 className="heading-section">
+            Simple process.
+            <span className="text-muted-foreground"> Real results.</span>
+          </h2>
         </div>
 
-        {/* Process steps - horizontal timeline on desktop */}
-        <div className="grid md:grid-cols-4 gap-6">
+        {/* Steps - horizontal on desktop */}
+        <div className="grid md:grid-cols-4 gap-8 md:gap-4">
           {steps.map((step, index) => (
             <div
               key={step.number}
               className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${200 + index * 150}ms` }}
+              style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
-              {/* Connecting line */}
+              {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-full w-full h-px bg-border/50 -translate-x-1/2" />
+                <div className="hidden md:block absolute top-6 left-full w-full h-px bg-border" />
               )}
 
-              {/* Step card */}
-              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <span className="text-lg font-bold text-primary font-mono">{step.number}</span>
-                  </div>
-                  <span className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground">
-                    {step.duration}
+              <div className="relative">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-4xl md:text-5xl font-black text-primary">
+                    {step.number}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                    {step.time}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-black mb-3">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className={`mt-16 text-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '800ms' }}>
-          <p className="text-muted-foreground mb-6">
-            Most founders see results within the first month.
-          </p>
+        {/* CTA */}
+        <div className={`mt-20 pt-16 border-t border-border text-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '600ms' }}>
+          <p className="text-muted-foreground mb-6">Most founders see results within the first month.</p>
           <a href="#contact" className="btn-outline">
-            Book your discovery call
+            Start your project
           </a>
         </div>
       </div>

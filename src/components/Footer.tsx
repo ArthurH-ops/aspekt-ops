@@ -1,129 +1,82 @@
-import { Linkedin, ExternalLink } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border py-16">
-      <div className="container-wide">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
+    <footer className="border-t border-border">
+      <div className="container-wide py-16">
+        {/* Top */}
+        <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 bg-primary rounded-md flex items-center justify-center">
-                <Logo className="w-6 h-6 text-primary-foreground" />
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-primary flex items-center justify-center">
+                <Logo className="w-7 h-7 text-primary-foreground" />
               </div>
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-lg font-bold tracking-tight">aspekt</span>
-                <span className="text-xs text-muted-foreground font-medium">ops</span>
+              <div className="flex items-baseline gap-1">
+                <span className="text-lg font-black uppercase tracking-tight">Aspekt</span>
+                <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Ops</span>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Strategic advisory for hardware and deep-tech startups.
+            <p className="text-muted-foreground max-w-xs">
+              Technical advisory for hardware and deep-tech startups. Vienna.
             </p>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-semibold mb-5">Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Technical Architecture
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Investor Readiness
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Due Diligence Support
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-sm font-semibold mb-5">Company</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Work
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://aspektdevelopment.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-                >
-                  Aspekt Development
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Connect */}
-          <div>
-            <h4 className="text-sm font-semibold mb-5">Connect</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="https://arthurh.tech"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-                >
-                  Arthur Handler
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:arthur@aspektdevelopment.com"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/company/aspekt-development"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-                >
-                  LinkedIn
-                  <Linkedin className="w-3 h-3" />
-                </a>
-              </li>
-            </ul>
+          {/* Links */}
+          <div className="flex flex-wrap gap-16">
+            <div>
+              <p className="text-xs uppercase tracking-wider font-bold mb-4">Services</p>
+              <ul className="space-y-3">
+                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Technical Architecture</a></li>
+                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Investor Readiness</a></li>
+                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Due Diligence</a></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider font-bold mb-4">Company</p>
+              <ul className="space-y-3">
+                <li><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
+                <li><a href="#work" className="text-muted-foreground hover:text-foreground transition-colors">Work</a></li>
+                <li>
+                  <a href="https://aspektdevelopment.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1">
+                    Aspekt Development
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider font-bold mb-4">Connect</p>
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://arthurh.tech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1">
+                    Arthur Handler
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </li>
+                <li><a href="mailto:arthur@aspektdevelopment.com" className="text-muted-foreground hover:text-foreground transition-colors">Email</a></li>
+                <li>
+                  <a href="https://linkedin.com/company/aspekt-development" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1">
+                    LinkedIn
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Aspekt Operations GmbH. Vienna, Austria.
+            © {currentYear} Aspekt Operations GmbH
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Imprint
-            </a>
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
+            <a href="#" className="hover:text-foreground transition-colors">Imprint</a>
           </div>
         </div>
       </div>

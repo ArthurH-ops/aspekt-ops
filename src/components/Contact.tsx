@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Check, Mail, Calendar } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact = () => {
@@ -42,55 +42,38 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding border-t border-border relative overflow-hidden">
-      {/* Background - waveform */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.08] dark:opacity-[0.05]"
-        style={{ backgroundImage: "url('/images/bg/waveform.jpg')" }}
-      />
-
-      <div className="container-wide relative z-10" ref={ref}>
+    <section id="contact" className="section-padding border-t border-border" ref={ref}>
+      <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left column */}
+          {/* Left */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-4">Get Started</p>
+            <p className="eyebrow mb-6">Get Started</p>
             <h2 className="heading-section mb-8">
-              Let's talk about<br />
-              <span className="text-muted-foreground">your project.</span>
+              Let's talk about
+              <span className="text-muted-foreground"> your project.</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              No pitch required. Just tell us what you're working on and we'll
+            <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+              No pitch required. Just tell us what you're building and we'll
               figure out if we can help. Most conversations start with a quick
-              30-minute call — no strings attached.
+              30-minute call.
             </p>
 
             <div className="space-y-4">
               <a
                 href="mailto:arthur@aspektdevelopment.com"
-                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors group bg-card/50 backdrop-blur-sm"
+                className="block p-6 border-2 border-border hover:border-primary transition-colors group"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium group-hover:text-primary transition-colors">Email us directly</p>
-                  <p className="text-sm text-muted-foreground">arthur@aspektdevelopment.com</p>
-                </div>
+                <p className="font-bold group-hover:text-primary transition-colors mb-1">Email directly</p>
+                <p className="text-sm text-muted-foreground">arthur@aspektdevelopment.com</p>
               </a>
-
-              <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
-                  <Calendar className="w-5 h-5 text-muted-foreground" />
-                </div>
-                <div>
-                  <p className="font-medium">Response time</p>
-                  <p className="text-sm text-muted-foreground">Usually within 24 hours</p>
-                </div>
+              <div className="p-6 border-2 border-border">
+                <p className="font-bold mb-1">Response time</p>
+                <p className="text-sm text-muted-foreground">Usually within 24 hours</p>
               </div>
             </div>
           </div>
 
-          {/* Right column - Form */}
+          {/* Right - Form */}
           <form
             onSubmit={handleSubmit}
             className={`space-y-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -98,7 +81,7 @@ const Contact = () => {
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-3">
+                <label htmlFor="name" className="block text-xs uppercase tracking-wider font-bold mb-3">
                   Name
                 </label>
                 <input
@@ -107,12 +90,12 @@ const Contact = () => {
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                  className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
+                  className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-border focus:border-primary focus:outline-none transition-colors text-foreground"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-3">
+                <label htmlFor="email" className="block text-xs uppercase tracking-wider font-bold mb-3">
                   Email
                 </label>
                 <input
@@ -121,38 +104,38 @@ const Contact = () => {
                   required
                   value={formState.email}
                   onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                  className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
+                  className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-border focus:border-primary focus:outline-none transition-colors text-foreground"
                   placeholder="you@company.com"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-medium mb-3">
-                Company / Project <span className="text-muted-foreground font-normal">(optional)</span>
+              <label htmlFor="company" className="block text-xs uppercase tracking-wider font-bold mb-3">
+                Company <span className="text-muted-foreground font-normal">(optional)</span>
               </label>
               <input
                 type="text"
                 id="company"
                 value={formState.company}
                 onChange={(e) => setFormState({ ...formState, company: e.target.value })}
-                className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
-                placeholder="Your company or project name"
+                className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-border focus:border-primary focus:outline-none transition-colors text-foreground"
+                placeholder="Your company"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-3">
-                What are you working on?
+              <label htmlFor="message" className="block text-xs uppercase tracking-wider font-bold mb-3">
+                Message
               </label>
               <textarea
                 id="message"
                 required
-                rows={5}
+                rows={4}
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                className="w-full px-4 py-4 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground resize-none"
-                placeholder="Tell us about your project — stage, challenges, what you're looking for..."
+                className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-border focus:border-primary focus:outline-none transition-colors text-foreground resize-none"
+                placeholder="Tell us about your project..."
               />
             </div>
 
@@ -166,7 +149,7 @@ const Contact = () => {
               ) : status === 'success' ? (
                 <>
                   <Check className="w-5 h-5" />
-                  Message sent
+                  Sent
                 </>
               ) : status === 'error' ? (
                 'Try again'
@@ -180,7 +163,7 @@ const Contact = () => {
 
             {status === 'error' && (
               <p className="text-sm text-muted-foreground">
-                Something went wrong. Please email us directly at{' '}
+                Something went wrong. Email us at{' '}
                 <a href="mailto:arthur@aspektdevelopment.com" className="text-primary hover:underline">
                   arthur@aspektdevelopment.com
                 </a>

@@ -1,90 +1,72 @@
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
-      {/* Background image - hardcore engineering */}
+    <section className="min-h-screen flex flex-col justify-between relative overflow-hidden">
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/bg/hardcore engineering.jpg')" }}
       />
-      {/* Overlay - adapts to theme */}
-      <div className="absolute inset-0 bg-background/85 dark:bg-background/80" />
-      {/* Subtle grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--foreground)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground)/0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
-      {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-[150px]" />
+      <div className="absolute inset-0 bg-background/90 dark:bg-background/85" />
 
-      <div className="container-wide relative z-10 pt-32 pb-20">
-        <div className="max-w-5xl">
-          {/* Eyebrow */}
-          <p className="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-8 animate-fade-up">
-            Technical Advisory / Vienna
-          </p>
-
-          {/* Main headline */}
-          <h1 className="heading-hero mb-8">
-            <span className="animate-fade-up block">Hardware is hard.</span>
-            <span className="animate-fade-up block" style={{ animationDelay: '0.1s' }}>
-              <span className="text-serif-accent">We make it possible.</span>
-            </span>
-          </h1>
-
-          {/* Subtext */}
-          <p
-            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-12 animate-fade-up leading-relaxed"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Millions of products shipped through Aspekt Development. Medical devices,
-            biotech equipment, industrial systems. We've built what most call impossible —
-            now we help founders do the same.
-          </p>
-
-          {/* CTAs */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 animate-fade-up"
-            style={{ animationDelay: '0.3s' }}
-          >
-            <a href="#contact" className="btn-primary">
-              Start a conversation
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a href="#work" className="btn-outline">
-              See the work
-            </a>
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-border/50 animate-fade-up"
-          style={{ animationDelay: '0.4s' }}
-        >
-          <div>
-            <p className="text-4xl md:text-5xl font-bold text-primary">M+</p>
-            <p className="text-sm text-muted-foreground mt-1">Products on market</p>
-          </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-bold">8+</p>
-            <p className="text-sm text-muted-foreground mt-1">Years building</p>
-          </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-bold">€50M+</p>
-            <p className="text-sm text-muted-foreground mt-1">Client funding raised</p>
-          </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-bold">EU</p>
-            <p className="text-sm text-muted-foreground mt-1">Deep-tech hub</p>
-          </div>
+      {/* Top bar */}
+      <div className="relative z-10 pt-32 md:pt-40">
+        <div className="container-wide">
+          <p className="eyebrow animate-fade-up">Vienna / Deep-Tech / Advisory</p>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: '1s' }}>
-        <a href="#statement" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-          <span className="text-xs uppercase tracking-[0.2em]">Explore</span>
-          <ArrowDown className="w-4 h-4 animate-bounce" />
-        </a>
+      {/* Main content - massive text */}
+      <div className="relative z-10 flex-1 flex items-center">
+        <div className="container-wide w-full">
+          <h1 className="heading-hero animate-fade-up">
+            <span className="block">Hardware</span>
+            <span className="block text-stroke">is hard.</span>
+          </h1>
+          <h2 className="heading-hero text-primary mt-2 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <span className="block">We make it</span>
+            <span className="block">possible.</span>
+          </h2>
+        </div>
+      </div>
+
+      {/* Bottom section */}
+      <div className="relative z-10 pb-12 md:pb-20">
+        <div className="container-wide">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+            {/* Left - description */}
+            <div className="max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Millions of products shipped. Medical devices, biotech equipment,
+                industrial systems. Now we help founders build theirs.
+              </p>
+            </div>
+
+            {/* Right - CTA and stats */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-end gap-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <div className="flex gap-12">
+                <div>
+                  <p className="text-4xl md:text-5xl font-black">M+</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Products</p>
+                </div>
+                <div>
+                  <p className="text-4xl md:text-5xl font-black">8Y</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Building</p>
+                </div>
+              </div>
+              <a href="#contact" className="btn-primary">
+                Let's talk
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll line */}
+        <div className="container-wide mt-12">
+          <div className="h-px bg-border" />
+        </div>
       </div>
     </section>
   );
