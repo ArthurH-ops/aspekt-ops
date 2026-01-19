@@ -43,9 +43,9 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section-padding border-t border-border relative overflow-hidden">
-      {/* Background */}
+      {/* Background - waveform */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.03]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.08] dark:opacity-[0.05]"
         style={{ backgroundImage: "url('/images/bg/waveform.jpg')" }}
       />
 
@@ -67,7 +67,7 @@ const Contact = () => {
             <div className="space-y-4">
               <a
                 href="mailto:arthur@aspektdevelopment.com"
-                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors group bg-card/50"
+                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors group bg-card/50 backdrop-blur-sm"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Mail className="w-5 h-5 text-primary" />
@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card/50">
+              <div className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
                   <Calendar className="w-5 h-5 text-muted-foreground" />
                 </div>

@@ -3,15 +3,15 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
-      {/* Background image */}
+      {/* Background image - hardcore engineering */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/bg/waveform.jpg')" }}
+        style={{ backgroundImage: "url('/images/bg/hardcore engineering.jpg')" }}
       />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/80" />
+      {/* Overlay - adapts to theme */}
+      <div className="absolute inset-0 bg-background/85 dark:bg-background/80" />
       {/* Subtle grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--foreground)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground)/0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
       {/* Glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-[150px]" />
 
@@ -81,7 +81,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: '1s' }}>
-        <a href="#verticals" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+        <a href="#statement" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
           <span className="text-xs uppercase tracking-[0.2em]">Explore</span>
           <ArrowDown className="w-4 h-4 animate-bounce" />
         </a>

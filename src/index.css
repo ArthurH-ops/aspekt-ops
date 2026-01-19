@@ -4,6 +4,34 @@
 
 @layer base {
   :root {
+    /* Light Theme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    /* Deep Forest Green Accent */
+    --primary: 152 60% 28%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 152 60% 28%;
+    --accent-foreground: 0 0% 98%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 152 60% 28%;
+
+    --radius: 0.25rem;
+  }
+
+  .dark {
     /* Bold Dark Theme */
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
@@ -27,8 +55,6 @@
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 152 60% 32%;
-
-    --radius: 0.25rem;
   }
 }
 
@@ -81,7 +107,8 @@
   }
 
   .btn-primary:hover {
-    @apply scale-105 shadow-[0_0_40px_rgba(34,120,80,0.5)];
+    @apply scale-105;
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
   }
 
   .btn-outline {
@@ -106,7 +133,8 @@
   }
 
   .card-bold:hover {
-    @apply border-primary/50 shadow-[0_0_60px_rgba(34,120,80,0.15)];
+    @apply border-primary/50;
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.15);
   }
 
   /* Navigation */
@@ -139,11 +167,38 @@
 
   /* Glow effects */
   .glow-text {
-    text-shadow: 0 0 80px rgba(34, 120, 80, 0.6);
+    text-shadow: 0 0 80px hsl(var(--primary) / 0.6);
   }
 
   .glow-box {
-    box-shadow: 0 0 100px rgba(34, 120, 80, 0.2);
+    box-shadow: 0 0 100px hsl(var(--primary) / 0.2);
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300;
+    @apply bg-secondary hover:bg-muted border border-border;
+  }
+
+  /* Image overlay for light mode */
+  .img-overlay {
+    @apply absolute inset-0 transition-opacity duration-300;
+  }
+
+  .dark .img-overlay-dark {
+    @apply opacity-100;
+  }
+
+  .img-overlay-light {
+    @apply opacity-0;
+  }
+
+  .dark .img-overlay-light {
+    @apply opacity-0;
+  }
+
+  :not(.dark) .img-overlay-light {
+    @apply opacity-100;
   }
 }
 

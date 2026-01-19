@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import Statement from '@/components/Statement';
 import Verticals from '@/components/Verticals';
 import Services from '@/components/Services';
 import Network from '@/components/Network';
@@ -14,6 +15,7 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
+        <Statement />
         <Verticals />
         <Services />
         <Network />

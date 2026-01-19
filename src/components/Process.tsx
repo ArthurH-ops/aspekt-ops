@@ -32,10 +32,10 @@ const Process = () => {
 
   return (
     <section id="process" className="section-padding border-t border-border relative overflow-hidden">
-      {/* Background */}
+      {/* Background - spacetech */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.04]"
-        style={{ backgroundImage: "url('/images/bg/form.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.06] dark:opacity-[0.05]"
+        style={{ backgroundImage: "url('/images/bg/spacetech.jpg')" }}
       />
 
       <div className="container-wide relative z-10" ref={ref}>
@@ -67,7 +67,7 @@ const Process = () => {
               )}
 
               {/* Step card */}
-              <div className="bg-card/50 rounded-lg p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 h-full">
+              <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
                     <span className="text-lg font-bold text-primary font-mono">{step.number}</span>

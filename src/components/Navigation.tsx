@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +35,7 @@ const Navigation = () => {
             : 'bg-transparent'
         }`}
       >
-        <nav className="container-wide py-6 flex items-center justify-between">
+        <nav className="container-wide py-5 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-9 h-9 bg-primary rounded-md flex items-center justify-center">
               <Logo className="w-6 h-6 text-primary-foreground" />
@@ -51,18 +52,24 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <a href="#contact" className="btn-primary py-2.5 px-5 text-sm">
-              Get in touch
-            </a>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <a href="#contact" className="btn-primary py-2.5 px-5 text-sm">
+                Get in touch
+              </a>
+            </div>
           </div>
 
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden p-2 text-foreground"
-            aria-label="Open menu"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="p-2 text-foreground"
+              aria-label="Open menu"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -72,7 +79,7 @@ const Navigation = () => {
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="container-wide py-6 flex items-center justify-between">
+        <div className="container-wide py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 bg-primary rounded-md flex items-center justify-center">
               <Logo className="w-6 h-6 text-primary-foreground" />

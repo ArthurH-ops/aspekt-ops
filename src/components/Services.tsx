@@ -30,10 +30,10 @@ const Services = () => {
 
   return (
     <section id="services" className="section-padding border-t border-border relative overflow-hidden">
-      {/* Background */}
+      {/* Background - AI */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.03]"
-        style={{ backgroundImage: "url('/images/bg/robotics.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.06] dark:opacity-[0.04]"
+        style={{ backgroundImage: "url('/images/bg/AI.jpg')" }}
       />
 
       <div className="container-wide relative z-10" ref={ref}>

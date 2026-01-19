@@ -44,6 +44,12 @@ const Network = () => {
 
   return (
     <section id="work" className="section-padding border-t border-border relative overflow-hidden">
+      {/* Background - form */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.05] dark:opacity-[0.03]"
+        style={{ backgroundImage: "url('/images/bg/form.jpg')" }}
+      />
+
       <div className="container-wide relative z-10" ref={ref}>
         {/* Section header */}
         <div className={`flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
