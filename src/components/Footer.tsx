@@ -13,15 +13,15 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-primary flex items-center justify-center">
-                <Logo className="w-7 h-7 text-primary-foreground" />
+                <Logo className="w-6 h-6 text-primary-foreground" />
               </div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-lg font-black uppercase tracking-tight">Aspekt</span>
-                <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Ops</span>
+              <div className="flex items-baseline gap-0">
+                <span className="text-xl font-black lowercase tracking-tight">aspekt</span>
+                <span className="text-xl font-black text-primary lowercase tracking-tight">/ops</span>
               </div>
             </div>
             <p className="text-muted-foreground max-w-xs">
-              Technical advisory for hardware and deep-tech startups. Vienna.
+              Technical advisory for early-stage hardware startups across Europe. Based in Vienna.
             </p>
           </div>
 

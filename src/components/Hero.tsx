@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Top bar */}
       <div className="relative z-10 pt-32 md:pt-40">
         <div className="container-wide">
-          <p className="eyebrow animate-fade-up">Vienna / Deep-Tech / Advisory</p>
+          <p className="eyebrow animate-fade-up">Vienna / Deep-Tech / Early-Stage</p>
         </div>
       </div>
 
@@ -38,8 +38,8 @@ const Hero = () => {
             {/* Left - description */}
             <div className="max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Millions of products shipped. Medical devices, biotech equipment,
-                industrial systems. Now we help founders build theirs.
+                Millions of products shipped. Medical devices, industrial systems,
+                cleantech hardware. Now we help early-stage founders across Europe build theirs.
               </p>
             </div>
 

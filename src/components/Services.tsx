@@ -38,7 +38,7 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md text-lg lg:text-right lg:self-end">
-            Investors want proof. We help you build the technical story that gets you funded.
+            From first prototype to investor pitch. We help early-stage founders build the technical story that gets funded.
           </p>
         </div>
 

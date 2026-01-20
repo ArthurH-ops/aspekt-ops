@@ -3,27 +3,21 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 const verticals = [
   {
     title: 'MedTech',
-    description: 'Class I/II/III medical devices. Regulatory pathways. Clinical integration.',
+    description: 'Medical devices. Diagnostics. Wearables. CE & regulatory pathways.',
     image: '/images/bg/labautomatisation.jpg',
     number: '01',
   },
   {
-    title: 'BioTech',
-    description: 'Laboratory automation. Analytical instruments. Life science equipment.',
-    image: '/images/bg/biotech.jpg',
+    title: 'Industrial',
+    description: 'Automation systems. Robotics. IoT. Manufacturing equipment.',
+    image: '/images/bg/robotics.jpg',
     number: '02',
   },
   {
-    title: 'Robotics',
-    description: 'Industrial robotics. Autonomous systems. Precision mechatronics.',
-    image: '/images/bg/robotics.jpg',
+    title: 'CleanTech',
+    description: 'Energy systems. Sustainability hardware. Environmental monitoring.',
+    image: '/images/bg/biotech.jpg',
     number: '03',
-  },
-  {
-    title: 'SpaceTech',
-    description: 'Satellite subsystems. Ground equipment. Space-qualified hardware.',
-    image: '/images/bg/spacetech.jpg',
-    number: '04',
   },
 ];
 
@@ -42,14 +36,12 @@ const Verticals = () => {
           </h2>
         </div>
 
-        {/* Grid - asymmetric */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Grid - 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {verticals.map((vertical, index) => (
             <div
               key={vertical.title}
-              className={`group relative overflow-hidden cursor-pointer transition-all duration-700 ${
-                index === 0 ? 'md:row-span-2 aspect-square md:aspect-auto' : 'aspect-[16/9]'
-              } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group relative overflow-hidden cursor-pointer transition-all duration-700 aspect-[4/5] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
               {/* Background */}

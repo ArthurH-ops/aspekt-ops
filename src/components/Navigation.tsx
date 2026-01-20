@@ -37,11 +37,11 @@ const Navigation = () => {
         <nav className="container-wide py-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 bg-primary flex items-center justify-center">
-              <Logo className="w-7 h-7 text-primary-foreground" />
+              <Logo className="w-6 h-6 text-primary-foreground" />
             </div>
-            <div className="flex items-baseline gap-1">
-              <span className="text-lg font-black uppercase tracking-tight">Aspekt</span>
-              <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">Ops</span>
+            <div className="flex items-baseline gap-0">
+              <span className="text-xl font-black lowercase tracking-tight">aspekt</span>
+              <span className="text-xl font-black text-primary lowercase tracking-tight">/ops</span>
             </div>
           </a>
 
@@ -81,9 +81,12 @@ const Navigation = () => {
         <div className="container-wide py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-primary flex items-center justify-center">
-              <Logo className="w-7 h-7 text-primary-foreground" />
+              <Logo className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-lg font-black uppercase tracking-tight">Aspekt</span>
+            <div className="flex items-baseline gap-0">
+              <span className="text-xl font-black lowercase tracking-tight">aspekt</span>
+              <span className="text-xl font-black text-primary lowercase tracking-tight">/ops</span>
+            </div>
           </div>
           <button
             onClick={() => setIsMobileMenuOpen(false)}

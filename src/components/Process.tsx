@@ -10,7 +10,7 @@ const steps = [
   {
     number: '02',
     title: 'Assessment',
-    description: 'We review architecture, identify risks, map what's needed.',
+    description: "We review architecture, identify risks, map what's needed.",
     time: '1-2 weeks',
   },
   {

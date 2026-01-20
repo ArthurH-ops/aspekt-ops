@@ -21,7 +21,7 @@ const ValueProposition = () => {
                 behind Aspekt Development—a product studio that ships hardware.
               </p>
               <p>
-                Brain stimulation devices. Biotech equipment. Industrial IoT.
+                Medical devices. Industrial systems. Cleantech hardware.
                 We've seen the pitfalls and know the shortcuts.
               </p>
             </div>
