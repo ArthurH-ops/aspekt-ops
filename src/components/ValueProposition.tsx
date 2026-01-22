@@ -9,7 +9,13 @@ const ValueProposition = () => {
       <div className="container-wide py-24 md:py-32 lg:py-40">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+              transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+            }}
+          >
             <p className="eyebrow text-primary-foreground/60 mb-6">Why Us</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-primary-foreground leading-[0.95] tracking-tight mb-8">
               Builders first.
@@ -21,7 +27,7 @@ const ValueProposition = () => {
                 behind Aspekt Development—a product studio that ships hardware.
               </p>
               <p>
-                Medical devices. Industrial systems. Cleantech hardware.
+                Medical devices. Robotics. Biotech hardware.
                 We've seen the pitfalls and know the shortcuts.
               </p>
             </div>
@@ -31,7 +37,14 @@ const ValueProposition = () => {
           </div>
 
           {/* Right - stats card */}
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '150ms' }}>
+          <div
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+              transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+              transitionDelay: '120ms'
+            }}
+          >
             <div className="bg-background/10 backdrop-blur-sm p-8 md:p-12 border border-primary-foreground/20">
               <div className="mb-12">
                 <p className="text-[80px] md:text-[100px] font-black text-primary-foreground leading-none">M+</p>

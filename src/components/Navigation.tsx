@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import ThemeToggle from './ThemeToggle';
@@ -6,12 +6,34 @@ import ThemeToggle from './ThemeToggle';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const rafRef = useRef<number>();
+  const lastScrollY = useRef(0);
+
+  const handleScroll = useCallback(() => {
+    // Cancel any pending animation frame
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current);
+    }
+
+    rafRef.current = requestAnimationFrame(() => {
+      const currentScrollY = window.scrollY;
+      // Only update state if we've crossed the threshold
+      if ((currentScrollY > 50) !== (lastScrollY.current > 50)) {
+        setIsScrolled(currentScrollY > 50);
+      }
+      lastScrollY.current = currentScrollY;
+    });
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, [handleScroll]);
 
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
@@ -28,11 +50,15 @@ const Navigation = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 ${
           isScrolled
             ? 'bg-background/90 backdrop-blur-md border-b border-border'
-            : 'bg-transparent'
+            : 'bg-transparent border-b border-transparent'
         }`}
+        style={{
+          transition: 'background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease',
+          willChange: isScrolled ? 'auto' : 'background-color, backdrop-filter'
+        }}
       >
         <nav className="container-wide py-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">

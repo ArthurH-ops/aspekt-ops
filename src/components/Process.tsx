@@ -40,7 +40,14 @@ const Process = () => {
 
       <div className="container-wide relative z-10">
         {/* Header */}
-        <div className={`mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className="mb-20"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+            transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+          }}
+        >
           <p className="eyebrow mb-6">How We Work</p>
           <h2 className="heading-section">
             Simple process.
@@ -53,8 +60,13 @@ const Process = () => {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${200 + index * 100}ms` }}
+              className="relative"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
+                transition: 'opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
+                transitionDelay: `${100 + index * 80}ms`
+              }}
             >
               {/* Connector line */}
               {index < steps.length - 1 && (

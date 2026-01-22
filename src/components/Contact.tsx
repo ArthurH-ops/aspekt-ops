@@ -46,7 +46,13 @@ const Contact = () => {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+              transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+            }}
+          >
             <p className="eyebrow mb-6">Get Started</p>
             <h2 className="heading-section mb-8">
               Let's talk about
@@ -76,8 +82,13 @@ const Contact = () => {
           {/* Right - Form */}
           <form
             onSubmit={handleSubmit}
-            className={`space-y-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            style={{ transitionDelay: '150ms' }}
+            className="space-y-6"
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+              transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+              transitionDelay: '120ms'
+            }}
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <div>

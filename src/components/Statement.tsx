@@ -12,7 +12,13 @@ const Statement = () => {
       />
 
       <div className="container-wide py-24 md:py-32 lg:py-40 relative z-10" ref={ref}>
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        <div
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 32px, 0)',
+            transition: 'opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)'
+          }}
+        >
           <p className="eyebrow text-primary-foreground/60 mb-8">Our Philosophy</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.1] tracking-tight max-w-5xl">
             The difference between success and failure in hardware

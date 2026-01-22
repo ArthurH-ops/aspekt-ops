@@ -38,8 +38,8 @@ const Hero = () => {
             {/* Left - description */}
             <div className="max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Millions of products shipped. Medical devices, industrial systems,
-                cleantech hardware. Now we help early-stage founders across Europe build theirs.
+                Millions of products shipped. Medical devices, robotics,
+                biotech hardware. Now we help early-stage founders across Europe build theirs.
               </p>
             </div>
 

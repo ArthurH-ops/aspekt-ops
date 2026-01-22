@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Statement from '@/components/Statement';
@@ -10,8 +11,25 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Trigger page load animation after a brief moment
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setIsLoaded(true);
+      });
+    });
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div
+      className="min-h-screen bg-background text-foreground"
+      style={{
+        opacity: isLoaded ? 1 : 0,
+        transition: 'opacity 0.4s ease-out'
+      }}
+    >
       <Navigation />
       <main>
         <Hero />

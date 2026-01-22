@@ -29,7 +29,14 @@ const Services = () => {
     <section id="services" className="section-padding border-t border-border" ref={ref}>
       <div className="container-wide">
         {/* Header - left aligned, bold */}
-        <div className={`flex flex-col lg:flex-row lg:justify-between gap-8 mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className="flex flex-col lg:flex-row lg:justify-between gap-8 mb-20"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+            transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+          }}
+        >
           <div>
             <p className="eyebrow mb-6">What We Do</p>
             <h2 className="heading-section">
@@ -47,8 +54,13 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.number}
-              className={`group card-brutal flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${200 + index * 100}ms` }}
+              className="group card-brutal flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-16"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
+                transition: 'opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s',
+                transitionDelay: `${100 + index * 80}ms`
+              }}
             >
               {/* Number */}
               <div className="flex items-center justify-between lg:block">

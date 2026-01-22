@@ -65,15 +65,35 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
   }
 
   ::selection {
     @apply bg-primary text-primary-foreground;
+  }
+
+  /* Optimize images globally */
+  img {
+    content-visibility: auto;
   }
 }
 
@@ -110,18 +130,25 @@
     @apply text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-primary;
   }
 
-  /* Bold Buttons - chunky */
+  /* Bold Buttons - chunky with smooth transitions */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-bold text-base uppercase tracking-wider transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-bold text-base uppercase tracking-wider;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
   }
 
   .btn-primary:hover {
-    @apply scale-[1.02];
-    box-shadow: 0 0 60px hsl(var(--primary) / 0.6);
+    transform: scale(1.02) translate3d(0, 0, 0);
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.5);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98) translate3d(0, 0, 0);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-3 px-10 py-5 border-2 border-foreground text-foreground font-bold text-base uppercase tracking-wider transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-3 px-10 py-5 border-2 border-foreground text-foreground font-bold text-base uppercase tracking-wider;
+    transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .btn-outline:hover {
@@ -129,25 +156,28 @@
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 text-muted-foreground font-medium transition-colors duration-200;
+    @apply inline-flex items-center gap-2 text-muted-foreground font-medium;
+    transition: color 0.2s ease;
   }
 
   .btn-ghost:hover {
     @apply text-primary;
   }
 
-  /* Cards - brutal, minimal */
+  /* Cards - brutal, minimal with smooth hover */
   .card-brutal {
-    @apply p-8 md:p-12 bg-card border-2 border-border transition-all duration-200;
+    @apply p-8 md:p-12 bg-card border-2 border-border;
+    transition: border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .card-brutal:hover {
     @apply border-primary;
   }
 
-  /* Navigation - minimal */
+  /* Navigation - minimal with smooth hover */
   .nav-link {
-    @apply text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors duration-200;
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground;
+    transition: color 0.2s ease;
   }
 
   /* Section Layouts - tighter */
@@ -196,30 +226,34 @@
 }
 
 @layer utilities {
-  /* Animations */
+  /* GPU-accelerated animations using transform3d */
   .animate-fade-up {
-    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: transform, opacity;
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.4s ease-out forwards;
+    animation: fadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: opacity;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: slideUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
+    will-change: transform, opacity;
   }
 
+  /* Use transform3d for GPU acceleration */
   @keyframes fadeUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translate3d(0, 30px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -231,21 +265,41 @@
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(100px);
+      transform: translate3d(0, 100px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
   }
 
   .animate-marquee {
     animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
+
+  /* Scroll-triggered animation classes */
+  .scroll-animate {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+  }
+
+  .scroll-animate.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Clean up will-change after animation */
+  .scroll-animate.is-visible {
+    will-change: auto;
   }
 
   /* Gradient text */

@@ -46,7 +46,14 @@ const Network = () => {
     <section id="work" className="section-padding border-t border-border" ref={ref}>
       <div className="container-wide">
         {/* Header */}
-        <div className={`mb-16 md:mb-24 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className="mb-16 md:mb-24"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+            transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+          }}
+        >
           <p className="eyebrow mb-6">Selected Work</p>
           <h2 className="heading-section">
             Products we've
@@ -62,8 +69,13 @@ const Network = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group block border-b border-border py-8 first:border-t transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${200 + index * 80}ms` }}
+              className="group block border-b border-border py-8 first:border-t"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 16px, 0)',
+                transition: 'opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
+                transitionDelay: `${100 + index * 60}ms`
+              }}
             >
               <div className="flex items-center gap-6 md:gap-12">
                 {/* Image - hidden on mobile, shown on hover feel */}
@@ -71,6 +83,8 @@ const Network = () => {
                   <img
                     src={project.image}
                     alt={project.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
