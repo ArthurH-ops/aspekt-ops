@@ -4,25 +4,25 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 const verticals = [
   {
     title: 'Robotics',
-    description: 'Industrial systems. Automation. IoT. Manufacturing equipment.',
+    description: 'Complex mechatronics, real-time systems, and manufacturing scale-up that breaks most first-timers.',
     image: '/images/bg/robotics.jpg',
     number: '01',
   },
   {
     title: 'BioTech',
-    description: 'Life sciences. Sustainability hardware. Environmental monitoring.',
+    description: 'Where the science works in the lab but nobody knows how to turn it into a product.',
     image: '/images/bg/biotech.jpg',
     number: '02',
   },
   {
     title: 'MedTech',
-    description: 'Medical devices. Diagnostics. Wearables. CE & regulatory pathways.',
+    description: 'Regulatory minefields, CE marking, and the gap between prototype and certified device.',
     image: '/images/bg/labautomatisation.jpg',
     number: '03',
   },
   {
     title: 'Energy',
-    description: 'Power systems. Grid technology. Renewable infrastructure.',
+    description: 'Hardware that has to survive the real world. Grid-level reliability with startup-speed timelines.',
     image: '/images/bg/energy.jpg',
     number: '04',
   },
@@ -69,8 +69,8 @@ const Verticals = () => {
         >
           <p className="eyebrow mb-6">Industries</p>
           <h2 className="heading-section max-w-4xl">
-            Deep expertise across
-            <span className="text-muted-foreground"> high-stakes verticals.</span>
+            Your field has its own
+            <span className="text-muted-foreground"> pitfalls. We know them.</span>
           </h2>
         </div>
 

@@ -1,10 +1,5 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="32" height="32" fill="#1E8348"/>
-  <!-- "ao" monogram - exact match to Logo component -->
-  <g fill="white" transform="translate(2, 8) scale(0.28)">
-    <!-- "a" -->
-    <path d="M22.5,2c6.9,0,12.2,3,14.6,7.2h.35c-.1-1.5-.18-3.1-.18-4.2V2.9H48.5v45.3H37.27v-2.1c0-2,.09-3.2.18-4.2h-.35c-2.6,4.7-8.2,7.7-15.1,7.7C9.1,49.6,0,39.8,0,24.8S9.6,2,22.5,2ZM36.8,24.6c0-7.8-5.1-13.2-12.3-13.2s-12.2,5.4-12.2,13.2,5.2,13.4,12.2,13.4S36.8,32.4,36.8,24.6Z"/>
-    <!-- "o" -->
-    <path d="M25,0C38.8,0,50,11.2,50,25S38.8,50,25,50,0,38.8,0,25,11.2,0,25,0ZM25,38c7.2,0,13-5.8,13-13s-5.8-13-13-13-13,5.8-13,13S17.8,38,25,38Z" transform="translate(50, 0)"/>
-  </g>
+  <!-- "AO" monogram - bold and clear at small sizes -->
+  <text x="16" y="23" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="white" text-anchor="middle">ao</text>
 </svg>

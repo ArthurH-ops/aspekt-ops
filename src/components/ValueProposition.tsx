@@ -18,21 +18,22 @@ const ValueProposition = () => {
           >
             <p className="eyebrow text-primary-foreground/60 mb-6">Why Us</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-primary-foreground leading-[0.95] tracking-tight mb-8">
-              Builders first.
-              <span className="text-primary-foreground/50"> Advisors second.</span>
+              You don't need
+              <span className="text-primary-foreground/50"> another consultant.</span>
             </h2>
             <div className="space-y-6 text-primary-foreground/70 text-lg leading-relaxed">
               <p>
-                We're not consultants who've only read case studies. We're the team
-                behind Aspekt Development—a product studio that ships hardware.
+                You need someone who's already made the mistakes you're about to make.
+                We're the team behind Aspekt Development. A product studio that has shipped
+                millions of hardware products.
               </p>
               <p>
-                Medical devices. Robotics. Biotech hardware.
-                We've seen the pitfalls and know the shortcuts.
+                Medical devices. Robotics. Biotech.
+                We know where founders get stuck because we've pulled them out before.
               </p>
             </div>
             <p className="text-primary-foreground font-bold text-xl mt-8">
-              No theory. Just lessons from real products.
+              No theory. Real scars from real products.
             </p>
           </div>
 

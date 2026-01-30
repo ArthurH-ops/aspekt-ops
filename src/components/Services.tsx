@@ -5,19 +5,19 @@ const services = [
   {
     number: '01',
     title: 'Technical Architecture',
-    description: 'System design, tech stack decisions, and feasibility assessments. The documentation you need to prove your product can be built.',
+    description: "You have an idea but no clear path to build it. We validate feasibility, define the architecture, and give you a roadmap you can actually execute on.",
     deliverables: ['System architecture', 'Tech stack selection', 'Risk assessment', 'Build vs buy'],
   },
   {
     number: '02',
     title: 'Investor Readiness',
-    description: 'Technical sections for pitch decks, data room materials, and the answers to questions investors will ask.',
+    description: "Investors ask technical questions you can't answer yet. We build the tech slides, roadmap, and data room materials that make them stop asking.",
     deliverables: ['Pitch deck tech slides', 'Technical roadmap', 'Milestone planning', 'Data room'],
   },
   {
     number: '03',
     title: 'Due Diligence',
-    description: 'Prepare for technical due diligence before investors dig in. Know your weak spots and address them proactively.',
+    description: "Technical scrutiny kills deals you've worked months to close. We find your weak spots before investors do and help you fix them.",
     deliverables: ['Tech DD preparation', 'Risk documentation', 'Team assessment', 'Scalability review'],
   },
 ];
@@ -40,12 +40,12 @@ const Services = () => {
           <div>
             <p className="eyebrow mb-6">What We Do</p>
             <h2 className="heading-section">
-              Get the technical<br />
-              credibility you need.
+              You need technical<br />
+              credibility. Fast.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md text-lg lg:text-right lg:self-end">
-            From first prototype to investor pitch. We help early-stage founders build the technical story that gets funded.
+            Without a technical co-founder, investors won't take you seriously. We close that gap. From feasibility to fundable.
           </p>
         </div>
 

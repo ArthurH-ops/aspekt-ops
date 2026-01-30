@@ -64,19 +64,13 @@ const Contact = () => {
               30-minute call.
             </p>
 
-            <div className="space-y-4">
-              <a
-                href="mailto:arthur@aspektdevelopment.com"
-                className="block p-6 border-2 border-border hover:border-primary transition-colors group"
-              >
-                <p className="font-bold group-hover:text-primary transition-colors mb-1">Email directly</p>
-                <p className="text-sm text-muted-foreground">arthur@aspektdevelopment.com</p>
-              </a>
-              <div className="p-6 border-2 border-border">
-                <p className="font-bold mb-1">Response time</p>
-                <p className="text-sm text-muted-foreground">Usually within 24 hours</p>
-              </div>
-            </div>
+            <a
+              href="mailto:arthur@aspektdevelopment.com"
+              className="block p-6 border-2 border-border hover:border-primary transition-colors group"
+            >
+              <p className="font-bold group-hover:text-primary transition-colors mb-1">Email directly</p>
+              <p className="text-sm text-muted-foreground">arthur@aspektdevelopment.com</p>
+            </a>
           </div>
 
           {/* Right - Form */}

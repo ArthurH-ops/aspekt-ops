@@ -17,16 +17,15 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Main content - massive text */}
+      {/* Main content - the elevator pitch */}
       <div className="relative z-10 flex-1 flex items-center">
         <div className="container-wide w-full">
-          <h1 className="heading-hero animate-fade-up">
-            <span className="block">Hardware</span>
-            <span className="block text-stroke">is hard.</span>
+          <h1 className="text-[10vw] sm:text-[8vw] md:text-[7vw] font-black tracking-[-0.04em] leading-[0.85] uppercase animate-fade-up">
+            <span className="block">Millions of products</span>
+            <span className="block text-primary">shipped.</span>
           </h1>
-          <h2 className="heading-hero text-primary mt-2 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <span className="block">We make it</span>
-            <span className="block">possible.</span>
+          <h2 className="text-[6vw] sm:text-[5vw] md:text-[4vw] font-black text-muted-foreground mt-4 md:mt-6 leading-[0.95] tracking-[-0.02em] animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            Now we help early-stage founders ship theirs.
           </h2>
         </div>
       </div>
@@ -38,8 +37,7 @@ const Hero = () => {
             {/* Left - description */}
             <div className="max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Millions of products shipped. Medical devices, robotics,
-                biotech hardware. Now we help early-stage founders across Europe build theirs.
+                Medical devices. Robotics. Biotech hardware. We've built it all. Now we help you build yours.
               </p>
             </div>
 

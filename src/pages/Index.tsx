@@ -33,9 +33,9 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <Statement />
         <Verticals />
         <Services />
+        <Statement />
         <Network />
         <Process />
         <ValueProposition />

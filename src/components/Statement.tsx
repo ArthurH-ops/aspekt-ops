@@ -19,11 +19,11 @@ const Statement = () => {
             transition: 'opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)'
           }}
         >
-          <p className="eyebrow text-primary-foreground/60 mb-8">Our Philosophy</p>
+          <p className="eyebrow text-primary-foreground/60 mb-8">The Reality</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.1] tracking-tight max-w-5xl">
-            The difference between success and failure in hardware
-            <span className="text-primary-foreground/50"> isn't just technology—</span>
-            it's having someone who's been through it before.
+            Most hardware startups fail
+            <span className="text-primary-foreground/50"> not because the technology doesn't work</span>
+            but because nobody told them what to build first.
           </h2>
         </div>
       </div>
