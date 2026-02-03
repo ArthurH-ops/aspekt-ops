@@ -1,34 +1,25 @@
 import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-const verticals = [
+const painPoints = [
   {
-    title: 'Robotics',
-    description: 'Complex mechatronics, real-time systems, and manufacturing scale-up that breaks most first-timers.',
+    tension: 'You have a groundbreaking technology — but in six months, an investor needs to hold it in their hands.',
+    insight: 'Vision alone won\'t unlock the next round. Tangible progress is the currency of survival.',
     image: '/images/bg/robotics.jpg',
-    number: '01',
   },
   {
-    title: 'BioTech',
-    description: 'Where the science works in the lab but nobody knows how to turn it into a product.',
-    image: '/images/bg/biotech.jpg',
-    number: '02',
-  },
-  {
-    title: 'MedTech',
-    description: 'Regulatory minefields, CE marking, and the gap between prototype and certified device.',
+    tension: 'You can\'t afford another prototype that fails in the real world.',
+    insight: 'Every iteration burns time and trust. Hardware decisions must be grounded in scale, not just creativity.',
     image: '/images/bg/labautomatisation.jpg',
-    number: '03',
   },
   {
-    title: 'Energy',
-    description: 'Hardware that has to survive the real world. Grid-level reliability with startup-speed timelines.',
-    image: '/images/bg/energy.jpg',
-    number: '04',
+    tension: 'Your idea is brilliant — but right now, it only works with duct tape and a PhD.',
+    insight: 'Usability, repeatability, and integration aren\'t nice-to-haves. They are what turn tech into a product.',
+    image: '/images/bg/biotech.jpg',
   },
 ];
 
-// Lazy loaded background image component
 const LazyBackgroundImage = ({ src, className }: { src: string; className: string }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -67,51 +58,49 @@ const Verticals = () => {
             transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
           }}
         >
-          <p className="eyebrow mb-6">Industries</p>
+          <p className="eyebrow mb-6">Deep-Tech / Hardware</p>
           <h2 className="heading-section max-w-4xl">
-            Your field has its own
-            <span className="text-muted-foreground"> pitfalls. We know them.</span>
+            Sound familiar?
           </h2>
         </div>
 
-        {/* Grid - 2x2 square */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {verticals.map((vertical, index) => (
+        {/* Pain points - cards with background images */}
+        <div className="space-y-4">
+          {painPoints.map((point, index) => (
             <div
-              key={vertical.title}
-              className="group relative overflow-hidden cursor-pointer aspect-square"
+              key={index}
+              className="group relative overflow-hidden min-h-[280px] md:min-h-[320px]"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
                 transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
-                transitionDelay: `${100 + index * 80}ms`,
-                contain: 'layout style paint'
+                transitionDelay: `${100 + index * 120}ms`,
               }}
             >
-              {/* Background - lazy loaded */}
+              {/* Background image */}
               <LazyBackgroundImage
-                src={vertical.image}
+                src={point.image}
                 className="absolute inset-0 bg-cover bg-center will-change-transform group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-background/70 dark:bg-background/60 group-hover:bg-background/50 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-background/80 dark:bg-background/75 group-hover:bg-background/70 dark:group-hover:bg-background/65 transition-colors duration-500" />
 
               {/* Content */}
               <div className="relative h-full p-8 md:p-12 flex flex-col justify-between">
-                <span className="text-7xl md:text-8xl lg:text-9xl font-black text-foreground/10 group-hover:text-primary/20 transition-colors duration-300">
-                  {vertical.number}
-                </span>
-                <div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-black mb-3 group-hover:text-primary transition-colors duration-300">
-                    {vertical.title}
-                  </h3>
-                  <p className="text-base md:text-lg text-muted-foreground max-w-md">
-                    {vertical.description}
-                  </p>
+                <div className="flex items-start gap-5">
+                  <ArrowRight className="w-6 h-6 text-primary mt-1.5 shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+                  <div>
+                    <p className="text-xl md:text-2xl lg:text-3xl font-black leading-tight mb-4 group-hover:text-primary transition-colors duration-300">
+                      {point.tension}
+                    </p>
+                    <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
+                      {point.insight}
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Border on hover */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors duration-300" />
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors duration-300 pointer-events-none" />
             </div>
           ))}
         </div>

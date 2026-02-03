@@ -21,9 +21,8 @@ const Statement = () => {
         >
           <p className="eyebrow text-primary-foreground/60 mb-8">The Reality</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.1] tracking-tight max-w-5xl">
-            Most hardware startups fail
-            <span className="text-primary-foreground/50"> not because the technology doesn't work</span>
-            but because nobody told them what to build first.
+            Most deep-tech startups don't fail because the science is wrong.
+            <span className="text-primary-foreground/50"> They fail because no one turned it into a buildable, fundable plan.</span>
           </h2>
         </div>
       </div>

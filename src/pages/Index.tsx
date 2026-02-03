@@ -5,7 +5,7 @@ import Statement from '@/components/Statement';
 import Verticals from '@/components/Verticals';
 import Services from '@/components/Services';
 import Network from '@/components/Network';
-import Process from '@/components/Process';
+
 import ValueProposition from '@/components/ValueProposition';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -37,7 +37,6 @@ const Index = () => {
         <Services />
         <Statement />
         <Network />
-        <Process />
         <ValueProposition />
         <Contact />
       </main>

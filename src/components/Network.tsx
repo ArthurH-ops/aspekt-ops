@@ -56,8 +56,8 @@ const Network = () => {
         >
           <p className="eyebrow mb-6">Selected Work</p>
           <h2 className="heading-section">
-            Products we've
-            <span className="text-muted-foreground"> helped ship.</span>
+            Projects we've
+            <span className="text-muted-foreground"> helped build.</span>
           </h2>
         </div>
 

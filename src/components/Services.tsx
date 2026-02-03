@@ -1,24 +1,51 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const services = [
   {
     number: '01',
-    title: 'Technical Architecture',
-    description: "You have an idea but no clear path to build it. We validate feasibility, define the architecture, and give you a roadmap you can actually execute on.",
-    deliverables: ['System architecture', 'Tech stack selection', 'Risk assessment', 'Build vs buy'],
+    title: 'Technical Assessment',
+    description: "You have working tech but no clear path to a product. We assess what you've built, identify the gaps, and map what it takes to get from here to something real.",
+    deliverables: ['Feasibility validation', 'Architecture review', 'Risk identification', 'Build vs buy analysis'],
   },
   {
     number: '02',
-    title: 'Investor Readiness',
-    description: "Investors ask technical questions you can't answer yet. We build the tech slides, roadmap, and data room materials that make them stop asking.",
-    deliverables: ['Pitch deck tech slides', 'Technical roadmap', 'Milestone planning', 'Data room'],
+    title: 'Technical Project Plan',
+    description: "Founders tell us the hardest part isn't the science — it's knowing what to build next. We deliver a concrete plan: architecture, milestones, cost structure, and the roadmap to get there.",
+    deliverables: ['System architecture', 'Development roadmap', 'Milestone planning', 'Cost estimation'],
   },
   {
     number: '03',
-    title: 'Due Diligence',
-    description: "Technical scrutiny kills deals you've worked months to close. We find your weak spots before investors do and help you fix them.",
-    deliverables: ['Tech DD preparation', 'Risk documentation', 'Team assessment', 'Scalability review'],
+    title: 'Fundraise Support',
+    description: "When it comes to technical due diligence, we've seen founders struggle with questions they weren't prepared for. We help you build the technical narrative and materials before you need them.",
+    deliverables: ['Tech narrative for pitch', 'Technical roadmap', 'DD preparation', 'Data room materials'],
+  },
+];
+
+const steps = [
+  {
+    number: '01',
+    title: 'Discovery',
+    description: 'We learn about your technology, your stage, and where you\'re stuck. No prep needed.',
+    time: '30 min call',
+  },
+  {
+    number: '02',
+    title: 'Assessment',
+    description: 'We dig into what you\'ve built, identify risks, and map the gap between prototype and product.',
+    time: '1-2 weeks',
+  },
+  {
+    number: '03',
+    title: 'Project Plan',
+    description: 'We deliver your technical project plan — architecture, milestones, and a roadmap you can build on.',
+    time: '2-4 weeks',
+  },
+  {
+    number: '04',
+    title: 'Support',
+    description: 'We stay available for follow-up: technical questions, fundraise prep, or due diligence support.',
+    time: 'As needed',
   },
 ];
 
@@ -28,7 +55,7 @@ const Services = () => {
   return (
     <section id="services" className="section-padding border-t border-border" ref={ref}>
       <div className="container-wide">
-        {/* Header - left aligned, bold */}
+        {/* Header */}
         <div
           className="flex flex-col lg:flex-row lg:justify-between gap-8 mb-20"
           style={{
@@ -38,14 +65,14 @@ const Services = () => {
           }}
         >
           <div>
-            <p className="eyebrow mb-6">What We Do</p>
+            <p className="eyebrow mb-6">What We Deliver</p>
             <h2 className="heading-section">
-              You need technical<br />
-              credibility. Fast.
+              From prototype<br />
+              to project plan.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md text-lg lg:text-right lg:self-end">
-            Without a technical co-founder, investors won't take you seriously. We close that gap. From feasibility to fundable.
+            The bridge between working tech and a buildable product is a plan. We deliver that plan — grounded in real engineering, not slides.
           </p>
         </div>
 
@@ -101,14 +128,63 @@ const Services = () => {
           ))}
         </div>
 
+        {/* Process steps - integrated */}
+        <div
+          className="mt-20 pt-16 border-t border-border"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+            transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+            transitionDelay: '400ms'
+          }}
+        >
+          <p className="eyebrow mb-12">How We Work</p>
+
+          <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+            {steps.map((step, index) => (
+              <div
+                key={step.number}
+                className="relative"
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
+                  transition: 'opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
+                  transitionDelay: `${450 + index * 80}ms`
+                }}
+              >
+                {/* Connector line */}
+                {index < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-6 left-full w-full h-px bg-border" />
+                )}
+
+                <div className="relative">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-4xl md:text-5xl font-black text-primary">
+                      {step.number}
+                    </span>
+                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                      {step.time}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-black mb-3">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA */}
-        <div className={`mt-16 pt-16 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '500ms' }}>
+        <div className={`mt-16 pt-16 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '700ms' }}>
           <div>
             <p className="text-xl font-bold mb-1">Not sure where to start?</p>
-            <p className="text-muted-foreground">30-minute call. No commitment.</p>
+            <p className="text-muted-foreground">30-minute call. No commitment. From first call to project plan — typically within a few weeks.</p>
           </div>
-          <a href="#contact" className="btn-primary">
+          <a href="#contact" className="btn-primary shrink-0">
             Book a call
+            <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </div>

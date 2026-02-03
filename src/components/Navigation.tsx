@@ -41,7 +41,7 @@ const Navigation = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { label: 'Industries', href: '#verticals' },
+    { label: 'Deep-Tech', href: '#verticals' },
     { label: 'Services', href: '#services' },
     { label: 'Work', href: '#work' },
     { label: 'About', href: '#about' },

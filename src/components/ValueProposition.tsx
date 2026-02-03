@@ -18,22 +18,22 @@ const ValueProposition = () => {
           >
             <p className="eyebrow text-primary-foreground/60 mb-6">Why Us</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-primary-foreground leading-[0.95] tracking-tight mb-8">
-              You don't need
-              <span className="text-primary-foreground/50"> another consultant.</span>
+              We don't advise.
+              <span className="text-primary-foreground/50"> We've built.</span>
             </h2>
             <div className="space-y-6 text-primary-foreground/70 text-lg leading-relaxed">
               <p>
-                You need someone who's already made the mistakes you're about to make.
-                We're the team behind Aspekt Development. A product studio that has shipped
-                millions of hardware products.
+                We're the team behind Aspekt Development — a product studio that has been
+                turning deep-tech research into shippable hardware since 2016.
               </p>
               <p>
-                Medical devices. Robotics. Biotech.
-                We know where founders get stuck because we've pulled them out before.
+                We've seen where founders get stuck: between a working prototype and a product
+                that's buildable, scalable, and fundable. That's the gap we close — with a
+                concrete technical project plan.
               </p>
             </div>
             <p className="text-primary-foreground font-bold text-xl mt-8">
-              No theory. Real scars from real products.
+              Not theory. A plan you can execute on.
             </p>
           </div>
 
@@ -47,11 +47,6 @@ const ValueProposition = () => {
             }}
           >
             <div className="bg-background/10 backdrop-blur-sm p-8 md:p-12 border border-primary-foreground/20">
-              <div className="mb-12">
-                <p className="text-[80px] md:text-[100px] font-black text-primary-foreground leading-none">M+</p>
-                <p className="text-primary-foreground/50 text-sm uppercase tracking-wider mt-2">Products on market</p>
-              </div>
-
               <div className="space-y-6 mb-12">
                 <div className="flex justify-between py-4 border-b border-primary-foreground/20">
                   <span className="text-primary-foreground/50">Based</span>
@@ -64,6 +59,10 @@ const ValueProposition = () => {
                 <div className="flex justify-between py-4 border-b border-primary-foreground/20">
                   <span className="text-primary-foreground/50">Focus</span>
                   <span className="text-primary-foreground font-bold">Deep-Tech / Hardware</span>
+                </div>
+                <div className="flex justify-between py-4 border-b border-primary-foreground/20">
+                  <span className="text-primary-foreground/50">Output</span>
+                  <span className="text-primary-foreground font-bold">Technical Project Plan</span>
                 </div>
               </div>
 

@@ -21,12 +21,9 @@ const Hero = () => {
       <div className="relative z-10 flex-1 flex items-center">
         <div className="container-wide w-full">
           <h1 className="text-[10vw] sm:text-[8vw] md:text-[7vw] font-black tracking-[-0.04em] leading-[0.85] uppercase animate-fade-up">
-            <span className="block">Millions of products</span>
-            <span className="block text-primary">shipped.</span>
+            <span className="block">Your tech works.</span>
+            <span className="block text-primary">Now make it a product.</span>
           </h1>
-          <h2 className="text-[6vw] sm:text-[5vw] md:text-[4vw] font-black text-muted-foreground mt-4 md:mt-6 leading-[0.95] tracking-[-0.02em] animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Now we help early-stage founders ship theirs.
-          </h2>
         </div>
       </div>
 
@@ -37,7 +34,7 @@ const Hero = () => {
             {/* Left - description */}
             <div className="max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Medical devices. Robotics. Biotech hardware. We've built it all. Now we help you build yours.
+                Deep-tech founders have the science. What's missing is the roadmap from prototype to real product. We've been building that bridge since 2016.
               </p>
             </div>
 
@@ -45,12 +42,12 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-end gap-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <div className="flex gap-12">
                 <div>
-                  <p className="text-4xl md:text-5xl font-black">M+</p>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Products</p>
+                  <p className="text-4xl md:text-5xl font-black">8Y+</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Building</p>
                 </div>
                 <div>
-                  <p className="text-4xl md:text-5xl font-black">8Y</p>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Building</p>
+                  <p className="text-4xl md:text-5xl font-black">HW</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Deep-Tech</p>
                 </div>
               </div>
               <a href="#contact" className="btn-primary">

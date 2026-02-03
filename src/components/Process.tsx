@@ -4,26 +4,26 @@ const steps = [
   {
     number: '01',
     title: 'Discovery',
-    description: 'We learn about your product, stage, and challenges. No prep needed.',
+    description: 'We learn about your technology, your stage, and where you\'re stuck. No prep needed.',
     time: '30 min call',
   },
   {
     number: '02',
     title: 'Assessment',
-    description: "We review architecture, identify risks, map what's needed.",
+    description: 'We dig into what you\'ve built, identify risks, and map the gap between prototype and product.',
     time: '1-2 weeks',
   },
   {
     number: '03',
-    title: 'Documentation',
-    description: 'We create technical materials investors expect.',
+    title: 'Project Plan',
+    description: 'We deliver your technical project plan — architecture, milestones, and a roadmap you can build on.',
     time: '2-4 weeks',
   },
   {
     number: '04',
     title: 'Support',
-    description: 'We prep you for due diligence and join calls if needed.',
-    time: 'Ongoing',
+    description: 'We stay available for follow-up: technical questions, fundraise prep, or due diligence support.',
+    time: 'As needed',
   },
 ];
 
@@ -93,7 +93,7 @@ const Process = () => {
 
         {/* CTA */}
         <div className={`mt-20 pt-16 border-t border-border text-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '600ms' }}>
-          <p className="text-muted-foreground mb-6">Most founders see results within the first month.</p>
+          <p className="text-muted-foreground mb-6">From first call to project plan — typically within a few weeks.</p>
           <a href="#contact" className="btn-outline">
             Start your project
           </a>

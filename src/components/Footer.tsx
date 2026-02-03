@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground max-w-xs">
-              Technical advisory for early-stage hardware startups across Europe. Based in Vienna.
+              Technical project plans for early-stage deep-tech startups. Based in Vienna.
             </p>
           </div>
 
@@ -30,9 +30,9 @@ const Footer = () => {
             <div>
               <p className="text-xs uppercase tracking-wider font-bold mb-4">Services</p>
               <ul className="space-y-3">
-                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Technical Architecture</a></li>
-                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Investor Readiness</a></li>
-                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Due Diligence</a></li>
+                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Technical Assessment</a></li>
+                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Technical Project Plan</a></li>
+                <li><a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Fundraise Support</a></li>
               </ul>
             </div>
             <div>
