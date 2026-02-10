@@ -65,11 +65,11 @@ const Verticals = () => {
         </div>
 
         {/* Pain points - cards with background images */}
-        <div className="space-y-4">
+        <div className="space-y-1">
           {painPoints.map((point, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden min-h-[280px] md:min-h-[320px]"
+              className="group relative overflow-hidden min-h-[180px] md:min-h-[200px]"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',

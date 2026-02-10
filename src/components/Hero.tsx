@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-end gap-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <div className="flex gap-12">
                 <div>
-                  <p className="text-4xl md:text-5xl font-black">8Y+</p>
+                  <p className="text-4xl md:text-5xl font-black">10Y+</p>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Building</p>
                 </div>
                 <div>
