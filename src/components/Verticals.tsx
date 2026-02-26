@@ -4,18 +4,18 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const painPoints = [
   {
-    tension: 'You have a groundbreaking technology — but in six months, an investor needs to hold it in their hands.',
-    insight: 'Vision alone won\'t unlock the next round. Tangible progress is the currency of survival.',
+    tension: 'Your system needs to scale — but the architecture was never designed for manufacturing, testing, or certification.',
+    insight: 'Scaling isn\'t just about building more. It requires a plan that accounts for production realities from day one.',
     image: '/images/bg/robotics.jpg',
   },
   {
-    tension: 'You can\'t afford another prototype that fails in the real world.',
-    insight: 'Every iteration burns time and trust. Hardware decisions must be grounded in scale, not just creativity.',
+    tension: 'Your next funding round needs proof — something tangible, testable, and presentable.',
+    insight: 'Vision alone won\'t unlock the next round. Investors need to see a credible path from prototype to product.',
     image: '/images/bg/labautomatisation.jpg',
   },
   {
-    tension: 'Your idea is brilliant — but right now, it only works with duct tape and a PhD.',
-    insight: 'Usability, repeatability, and integration aren\'t nice-to-haves. They are what turn tech into a product.',
+    tension: 'Your deciding factor is speed to reality — it represents the difference between being a first-mover or being left behind.',
+    insight: 'Time kills deep-tech startups. A clear roadmap eliminates guesswork and accelerates every decision.',
     image: '/images/bg/biotech.jpg',
   },
 ];
@@ -103,6 +103,24 @@ const Verticals = () => {
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors duration-300 pointer-events-none" />
             </div>
           ))}
+        </div>
+
+        {/* Closing statement */}
+        <div
+          className="mt-16 text-center"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+            transition: 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+            transitionDelay: '500ms',
+          }}
+        >
+          <p className="text-2xl md:text-3xl font-black">
+            That's where we come in.
+          </p>
+          <p className="text-lg md:text-xl text-muted-foreground mt-2">
+            Your IP stays yours — we plan, you own.
+          </p>
         </div>
       </div>
     </section>

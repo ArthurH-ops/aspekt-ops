@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Top bar */}
       <div className="relative z-10 pt-32 md:pt-40">
         <div className="container-wide">
-          <p className="eyebrow animate-fade-up">Vienna / Deep-Tech / Early-Stage</p>
+          <p className="eyebrow animate-fade-up">EUROPE / DEEP-TECH / EARLY-STAGE / OUT OF VIENNA</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ const Hero = () => {
                 </div>
               </div>
               <a href="#contact" className="btn-primary">
-                Let's talk
+                Want to build together?
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>

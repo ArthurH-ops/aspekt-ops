@@ -18,18 +18,19 @@ const ValueProposition = () => {
           >
             <p className="eyebrow text-primary-foreground/60 mb-6">Why Us</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-primary-foreground leading-[0.95] tracking-tight mb-8">
-              We don't advise.
-              <span className="text-primary-foreground/50"> We've built.</span>
+              We don't just advise.
+              <span className="text-primary-foreground/50"> We have actually built stuff.</span>
             </h2>
             <div className="space-y-6 text-primary-foreground/70 text-lg leading-relaxed">
               <p>
-                We're the team behind Aspekt Development — a product studio that has been
-                turning deep-tech research into shippable hardware since 2016.
+                We are technologists, and we believe most of the world's problems can be solved through realized breakthroughs.
               </p>
               <p>
-                We've seen where founders get stuck: between a working prototype and a product
-                that's buildable, scalable, and fundable. That's the gap we close — with a
-                concrete technical project plan.
+                We're the team behind Aspekt Development — a product studio that has been
+                turning deep-tech research into shippable hardware since 2016. We've been through this for years and know it's all about execution.
+              </p>
+              <p>
+                But every great project starts with a good plan. That's our focus here: the roadmap from prototype to product. When it's time to build, that's where Aspekt Development comes in.
               </p>
             </div>
             <p className="text-primary-foreground font-bold text-xl mt-8">
