@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#ffffff"/>
+
+  <!-- aspekt/ops text only -->
+  <text x="200" y="210" text-anchor="middle" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="52" font-weight="900" letter-spacing="-0.02em">
+    <tspan fill="#000000">aspekt</tspan><tspan fill="#1E8348">/ops</tspan>
+  </text>
+</svg>

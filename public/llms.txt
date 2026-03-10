@@ -1,0 +1,119 @@
+# Aspekt Operations
+
+> Strategic advisory for hardware and deep-tech startups. Technical project plans from prototype to product. Based in Vienna, Austria.
+
+## About
+
+Aspekt Operations (also known as "Aspekt Ops" or "aspekt/ops") is a strategic advisory firm that helps deep-tech and hardware startups turn working prototypes into buildable, fundable product plans.
+
+We are the advisory arm of the Aspekt ecosystem. Aspekt Development (https://aspektdevelopment.com) is our product studio that has been building deep-tech hardware since 2016. Aspekt Operations focuses specifically on the planning phase: technical assessments, project plans, and fundraise preparation.
+
+**Legal Entity:** Aspekt Operations GmbH
+**Founded:** 2016
+**Location:** Vienna, Austria
+**Founder:** Arthur Handler (https://arthurh.tech)
+**Contact:** arthur@aspektdevelopment.com
+**Website:** https://aspektoperations.com
+
+## Core Services
+
+### 1. Technical Assessment
+You have working tech but no clear path to a product. We assess what you've built, identify the gaps, and map what it takes to get from here to something real.
+- Feasibility validation
+- Architecture review
+- Risk identification
+- Build vs buy analysis
+
+### 2. Technical Project Plan
+Founders tell us the hardest part isn't the science — it's knowing what to build next. We deliver a concrete plan: architecture, milestones, cost structure, and the roadmap to get there.
+- System architecture
+- Development roadmap
+- Milestone planning
+- Cost estimation
+
+### 3. Fundraise Support
+When it comes to technical due diligence, we've seen founders struggle with questions they weren't prepared for. We help you build the technical narrative and materials before you need them.
+- Tech narrative for pitch
+- Technical roadmap
+- DD preparation
+- Data room materials
+
+## Target Audience
+
+- Deep-tech and hardware startups (pre-seed to Series A)
+- Founders with working prototypes who need a path to product
+- Startups preparing for technical due diligence or fundraising
+- Teams that need fractional CTO expertise without full-time commitment
+
+## Deep-Tech Verticals
+
+We have experience across the following sectors:
+- Medical Devices (e.g., brain stimulation, surgical tools)
+- Biotech (e.g., electroporation, cell models)
+- Healthcare IoT (e.g., sensor systems for nursing care)
+- Consumer Hardware (e.g., industrial design, precision manufacturing)
+- Industrial Tech
+- Robotics
+- Space Tech
+- Energy
+- Lab Automation
+- AI Hardware
+
+## Portfolio (Selected Work via Aspekt Development)
+
+These are projects built by Aspekt Development, demonstrating our hands-on engineering experience:
+
+- **Brightmind** — Medical Device: Non-invasive brain stimulation for migraine prevention. Took the project from prototype to CE certification.
+- **Cellectric** — Biotech: Laboratory electroporation system. Full product development from concept to market-ready device.
+- **Lifetaq** — Biotech: 3D human cell models for pharma drug testing. Developed lab-grade hardware for biological sample handling.
+- **DigniSens** — Healthcare IoT: Digital sensor systems for nursing care. Connected hardware with cloud analytics.
+- **EOOS** — Consumer: Award-winning industrial design collaboration. Precision manufacturing and product engineering.
+
+**Trusted by:** Philips, Palfinger, Cellectric, Brightmind, Playbrush, DigniSens
+
+## Process
+
+1. **Discovery** (30 min call) — We learn about your technology, your stage, and where you're stuck. No prep needed.
+2. **Assessment** (1–2 weeks) — We dig into what you've built, identify risks, and map the gap between prototype and product.
+3. **Project Plan** (2–4 weeks) — We deliver your technical project plan — architecture, milestones, and a roadmap you can build on.
+4. **Support** (As needed) — We stay available for follow-up: technical questions, fundraise prep, or due diligence support.
+
+## Why Aspekt Operations
+
+- **Not consultants — technologists.** We've spent 10+ years actually building hardware products.
+- **From Aspekt Development.** The same team that has been turning deep-tech research into shippable hardware since 2016.
+- **Plan-focused.** We don't try to build everything. We deliver the roadmap; you decide how to execute.
+- **IP stays yours.** We plan, you own. No lock-in, no equity demands.
+- **European-based.** Vienna, Austria. We understand the European deep-tech and regulatory landscape.
+
+## Key Insight
+
+Most deep-tech startups don't fail because the science is wrong. They fail because no one turned it into a buildable, fundable plan. That's the gap Aspekt Operations fills.
+
+## Frequently Asked Questions
+
+**Q: What does Aspekt Operations do?**
+A: We are a strategic advisory firm for hardware and deep-tech startups. We help founders turn working prototypes into buildable, fundable product plans through technical assessments, project planning, and fundraise support.
+
+**Q: What is the difference between Aspekt Operations and Aspekt Development?**
+A: Aspekt Operations is the advisory arm — we focus on planning (technical assessments, project plans, fundraise support). Aspekt Development is the product studio that builds the actual hardware. When it's time to plan, you work with Operations. When it's time to build, Development steps in.
+
+**Q: What industries do you work in?**
+A: Medical devices, biotech, healthcare IoT, consumer hardware, industrial tech, robotics, space tech, energy, lab automation, and AI hardware.
+
+**Q: Where are you based?**
+A: Vienna, Austria. We work with deep-tech startups across Europe and globally.
+
+**Q: Who founded Aspekt Operations?**
+A: Arthur Handler founded both Aspekt Operations and Aspekt Development. More at https://arthurh.tech
+
+**Q: How do I get started?**
+A: Email arthur@aspektdevelopment.com or visit https://aspektoperations.com to start with a 30-minute discovery call.
+
+## Links
+
+- Website: https://aspektoperations.com
+- Aspekt Development (Product Studio): https://aspektdevelopment.com
+- LinkedIn: https://linkedin.com/company/aspekt-development
+- Founder: https://arthurh.tech
+- Contact: arthur@aspektdevelopment.com
